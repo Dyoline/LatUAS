@@ -150,7 +150,7 @@ export default function PreorderPage() {
                             <th>Nama Organisasi</th>
                             <th>Ketua Organisasi</th>
                             <th>Nomor Kontak</th>
-                            <th>Tanggal Dibentuk</th>
+                            <th>Tahun Dibentuk</th>
                             <th>Pembina</th>
                             <th>Aksi</th>
                         </tr>
@@ -162,7 +162,7 @@ export default function PreorderPage() {
                                 <td>{item.nama_organisasi}</td>
                                 <td>{item.ketua_organisasi}</td>
                                 <td>{item.no_kontak}</td>
-                                <td>{new Date(item.tahun_dibentuk).toISOString().split('T')[0]}</td>
+                                <td>{new Date(item.tahun_dibentuk).getFullYear()}</td>
                                 <td>{item.pembina}</td>
                                 <td>
                                     <button onClick={() => handleEdit(item)}>Edit</button>
