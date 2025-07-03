@@ -11,26 +11,22 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model preorder {
+model kegiatan {
   id               Int      @id @default(autoincrement())
-  order_date       DateTime
-  order_by         String
-  selected_package String
-  qty              Int
-  status           Boolean
+  judul_kegiatan   String
+  id_organisasi    String
+  tanggal_kegiatan DateTime
+  lokasi           String
+  jenis_kegiatan   String
+  deskripsi        String
+  tautan           String
 }
 
-model paket {
-  id        Int    @id @default(autoincrement())
-  kode      String @unique
-  nama      String
-  deskripsi String
-}
-
-model customer {
-  id        Int      @id @default(autoincrement())
-  nama      String
-  phone     String
-  email     String
-  createdat DateTime @default(now())
+model organisasi {
+  id               Int      @id @default(autoincrement())
+  nama_organisasi  String
+  ketua_organisasi String
+  no_kontak        String
+  tahun_dibentuk   DateTime
+  pembina          String
 }

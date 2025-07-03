@@ -114,28 +114,24 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
-exports.Prisma.PreorderScalarFieldEnum = {
+exports.Prisma.KegiatanScalarFieldEnum = {
   id: 'id',
-  order_date: 'order_date',
-  order_by: 'order_by',
-  selected_package: 'selected_package',
-  qty: 'qty',
-  status: 'status'
+  judul_kegiatan: 'judul_kegiatan',
+  id_organisasi: 'id_organisasi',
+  tanggal_kegiatan: 'tanggal_kegiatan',
+  lokasi: 'lokasi',
+  jenis_kegiatan: 'jenis_kegiatan',
+  deskripsi: 'deskripsi',
+  tautan: 'tautan'
 };
 
-exports.Prisma.PaketScalarFieldEnum = {
+exports.Prisma.OrganisasiScalarFieldEnum = {
   id: 'id',
-  kode: 'kode',
-  nama: 'nama',
-  deskripsi: 'deskripsi'
-};
-
-exports.Prisma.CustomerScalarFieldEnum = {
-  id: 'id',
-  nama: 'nama',
-  phone: 'phone',
-  email: 'email',
-  createdat: 'createdat'
+  nama_organisasi: 'nama_organisasi',
+  ketua_organisasi: 'ketua_organisasi',
+  no_kontak: 'no_kontak',
+  tahun_dibentuk: 'tahun_dibentuk',
+  pembina: 'pembina'
 };
 
 exports.Prisma.SortOrder = {
@@ -145,9 +141,8 @@ exports.Prisma.SortOrder = {
 
 
 exports.Prisma.ModelName = {
-  preorder: 'preorder',
-  paket: 'paket',
-  customer: 'customer'
+  kegiatan: 'kegiatan',
+  organisasi: 'organisasi'
 };
 
 /**

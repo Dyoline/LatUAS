@@ -14,20 +14,15 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
 
 
 /**
- * Model preorder
+ * Model kegiatan
  * 
  */
-export type preorder = $Result.DefaultSelection<Prisma.$preorderPayload>
+export type kegiatan = $Result.DefaultSelection<Prisma.$kegiatanPayload>
 /**
- * Model paket
+ * Model organisasi
  * 
  */
-export type paket = $Result.DefaultSelection<Prisma.$paketPayload>
-/**
- * Model customer
- * 
- */
-export type customer = $Result.DefaultSelection<Prisma.$customerPayload>
+export type organisasi = $Result.DefaultSelection<Prisma.$organisasiPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -36,8 +31,8 @@ export type customer = $Result.DefaultSelection<Prisma.$customerPayload>
  * @example
  * ```
  * const prisma = new PrismaClient()
- * // Fetch zero or more Preorders
- * const preorders = await prisma.preorder.findMany()
+ * // Fetch zero or more Kegiatans
+ * const kegiatans = await prisma.kegiatan.findMany()
  * ```
  *
  *
@@ -57,8 +52,8 @@ export class PrismaClient<
    * @example
    * ```
    * const prisma = new PrismaClient()
-   * // Fetch zero or more Preorders
-   * const preorders = await prisma.preorder.findMany()
+   * // Fetch zero or more Kegiatans
+   * const kegiatans = await prisma.kegiatan.findMany()
    * ```
    *
    *
@@ -155,34 +150,24 @@ export class PrismaClient<
   }>>
 
       /**
-   * `prisma.preorder`: Exposes CRUD operations for the **preorder** model.
+   * `prisma.kegiatan`: Exposes CRUD operations for the **kegiatan** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Preorders
-    * const preorders = await prisma.preorder.findMany()
+    * // Fetch zero or more Kegiatans
+    * const kegiatans = await prisma.kegiatan.findMany()
     * ```
     */
-  get preorder(): Prisma.preorderDelegate<ExtArgs, ClientOptions>;
+  get kegiatan(): Prisma.kegiatanDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.paket`: Exposes CRUD operations for the **paket** model.
+   * `prisma.organisasi`: Exposes CRUD operations for the **organisasi** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Pakets
-    * const pakets = await prisma.paket.findMany()
+    * // Fetch zero or more Organisasis
+    * const organisasis = await prisma.organisasi.findMany()
     * ```
     */
-  get paket(): Prisma.paketDelegate<ExtArgs, ClientOptions>;
-
-  /**
-   * `prisma.customer`: Exposes CRUD operations for the **customer** model.
-    * Example usage:
-    * ```ts
-    * // Fetch zero or more Customers
-    * const customers = await prisma.customer.findMany()
-    * ```
-    */
-  get customer(): Prisma.customerDelegate<ExtArgs, ClientOptions>;
+  get organisasi(): Prisma.organisasiDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -623,9 +608,8 @@ export namespace Prisma {
 
 
   export const ModelName: {
-    preorder: 'preorder',
-    paket: 'paket',
-    customer: 'customer'
+    kegiatan: 'kegiatan',
+    organisasi: 'organisasi'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -644,229 +628,155 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "preorder" | "paket" | "customer"
+      modelProps: "kegiatan" | "organisasi"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
-      preorder: {
-        payload: Prisma.$preorderPayload<ExtArgs>
-        fields: Prisma.preorderFieldRefs
+      kegiatan: {
+        payload: Prisma.$kegiatanPayload<ExtArgs>
+        fields: Prisma.kegiatanFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.preorderFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$preorderPayload> | null
+            args: Prisma.kegiatanFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$kegiatanPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.preorderFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$preorderPayload>
+            args: Prisma.kegiatanFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$kegiatanPayload>
           }
           findFirst: {
-            args: Prisma.preorderFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$preorderPayload> | null
+            args: Prisma.kegiatanFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$kegiatanPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.preorderFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$preorderPayload>
+            args: Prisma.kegiatanFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$kegiatanPayload>
           }
           findMany: {
-            args: Prisma.preorderFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$preorderPayload>[]
+            args: Prisma.kegiatanFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$kegiatanPayload>[]
           }
           create: {
-            args: Prisma.preorderCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$preorderPayload>
+            args: Prisma.kegiatanCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$kegiatanPayload>
           }
           createMany: {
-            args: Prisma.preorderCreateManyArgs<ExtArgs>
+            args: Prisma.kegiatanCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.preorderCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$preorderPayload>[]
+            args: Prisma.kegiatanCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$kegiatanPayload>[]
           }
           delete: {
-            args: Prisma.preorderDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$preorderPayload>
+            args: Prisma.kegiatanDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$kegiatanPayload>
           }
           update: {
-            args: Prisma.preorderUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$preorderPayload>
+            args: Prisma.kegiatanUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$kegiatanPayload>
           }
           deleteMany: {
-            args: Prisma.preorderDeleteManyArgs<ExtArgs>
+            args: Prisma.kegiatanDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.preorderUpdateManyArgs<ExtArgs>
+            args: Prisma.kegiatanUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.preorderUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$preorderPayload>[]
+            args: Prisma.kegiatanUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$kegiatanPayload>[]
           }
           upsert: {
-            args: Prisma.preorderUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$preorderPayload>
+            args: Prisma.kegiatanUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$kegiatanPayload>
           }
           aggregate: {
-            args: Prisma.PreorderAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregatePreorder>
+            args: Prisma.KegiatanAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateKegiatan>
           }
           groupBy: {
-            args: Prisma.preorderGroupByArgs<ExtArgs>
-            result: $Utils.Optional<PreorderGroupByOutputType>[]
+            args: Prisma.kegiatanGroupByArgs<ExtArgs>
+            result: $Utils.Optional<KegiatanGroupByOutputType>[]
           }
           count: {
-            args: Prisma.preorderCountArgs<ExtArgs>
-            result: $Utils.Optional<PreorderCountAggregateOutputType> | number
+            args: Prisma.kegiatanCountArgs<ExtArgs>
+            result: $Utils.Optional<KegiatanCountAggregateOutputType> | number
           }
         }
       }
-      paket: {
-        payload: Prisma.$paketPayload<ExtArgs>
-        fields: Prisma.paketFieldRefs
+      organisasi: {
+        payload: Prisma.$organisasiPayload<ExtArgs>
+        fields: Prisma.organisasiFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.paketFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$paketPayload> | null
+            args: Prisma.organisasiFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$organisasiPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.paketFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$paketPayload>
+            args: Prisma.organisasiFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$organisasiPayload>
           }
           findFirst: {
-            args: Prisma.paketFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$paketPayload> | null
+            args: Prisma.organisasiFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$organisasiPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.paketFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$paketPayload>
+            args: Prisma.organisasiFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$organisasiPayload>
           }
           findMany: {
-            args: Prisma.paketFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$paketPayload>[]
+            args: Prisma.organisasiFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$organisasiPayload>[]
           }
           create: {
-            args: Prisma.paketCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$paketPayload>
+            args: Prisma.organisasiCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$organisasiPayload>
           }
           createMany: {
-            args: Prisma.paketCreateManyArgs<ExtArgs>
+            args: Prisma.organisasiCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.paketCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$paketPayload>[]
+            args: Prisma.organisasiCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$organisasiPayload>[]
           }
           delete: {
-            args: Prisma.paketDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$paketPayload>
+            args: Prisma.organisasiDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$organisasiPayload>
           }
           update: {
-            args: Prisma.paketUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$paketPayload>
+            args: Prisma.organisasiUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$organisasiPayload>
           }
           deleteMany: {
-            args: Prisma.paketDeleteManyArgs<ExtArgs>
+            args: Prisma.organisasiDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.paketUpdateManyArgs<ExtArgs>
+            args: Prisma.organisasiUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.paketUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$paketPayload>[]
+            args: Prisma.organisasiUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$organisasiPayload>[]
           }
           upsert: {
-            args: Prisma.paketUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$paketPayload>
+            args: Prisma.organisasiUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$organisasiPayload>
           }
           aggregate: {
-            args: Prisma.PaketAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregatePaket>
+            args: Prisma.OrganisasiAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateOrganisasi>
           }
           groupBy: {
-            args: Prisma.paketGroupByArgs<ExtArgs>
-            result: $Utils.Optional<PaketGroupByOutputType>[]
+            args: Prisma.organisasiGroupByArgs<ExtArgs>
+            result: $Utils.Optional<OrganisasiGroupByOutputType>[]
           }
           count: {
-            args: Prisma.paketCountArgs<ExtArgs>
-            result: $Utils.Optional<PaketCountAggregateOutputType> | number
-          }
-        }
-      }
-      customer: {
-        payload: Prisma.$customerPayload<ExtArgs>
-        fields: Prisma.customerFieldRefs
-        operations: {
-          findUnique: {
-            args: Prisma.customerFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$customerPayload> | null
-          }
-          findUniqueOrThrow: {
-            args: Prisma.customerFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$customerPayload>
-          }
-          findFirst: {
-            args: Prisma.customerFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$customerPayload> | null
-          }
-          findFirstOrThrow: {
-            args: Prisma.customerFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$customerPayload>
-          }
-          findMany: {
-            args: Prisma.customerFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$customerPayload>[]
-          }
-          create: {
-            args: Prisma.customerCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$customerPayload>
-          }
-          createMany: {
-            args: Prisma.customerCreateManyArgs<ExtArgs>
-            result: BatchPayload
-          }
-          createManyAndReturn: {
-            args: Prisma.customerCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$customerPayload>[]
-          }
-          delete: {
-            args: Prisma.customerDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$customerPayload>
-          }
-          update: {
-            args: Prisma.customerUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$customerPayload>
-          }
-          deleteMany: {
-            args: Prisma.customerDeleteManyArgs<ExtArgs>
-            result: BatchPayload
-          }
-          updateMany: {
-            args: Prisma.customerUpdateManyArgs<ExtArgs>
-            result: BatchPayload
-          }
-          updateManyAndReturn: {
-            args: Prisma.customerUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$customerPayload>[]
-          }
-          upsert: {
-            args: Prisma.customerUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$customerPayload>
-          }
-          aggregate: {
-            args: Prisma.CustomerAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateCustomer>
-          }
-          groupBy: {
-            args: Prisma.customerGroupByArgs<ExtArgs>
-            result: $Utils.Optional<CustomerGroupByOutputType>[]
-          }
-          count: {
-            args: Prisma.customerCountArgs<ExtArgs>
-            result: $Utils.Optional<CustomerCountAggregateOutputType> | number
+            args: Prisma.organisasiCountArgs<ExtArgs>
+            result: $Utils.Optional<OrganisasiCountAggregateOutputType> | number
           }
         }
       }
@@ -954,9 +864,8 @@ export namespace Prisma {
     omit?: Prisma.GlobalOmitConfig
   }
   export type GlobalOmitConfig = {
-    preorder?: preorderOmit
-    paket?: paketOmit
-    customer?: customerOmit
+    kegiatan?: kegiatanOmit
+    organisasi?: organisasiOmit
   }
 
   /* Types for Logging */
@@ -1052,1402 +961,406 @@ export namespace Prisma {
    */
 
   /**
-   * Model preorder
+   * Model kegiatan
    */
 
-  export type AggregatePreorder = {
-    _count: PreorderCountAggregateOutputType | null
-    _avg: PreorderAvgAggregateOutputType | null
-    _sum: PreorderSumAggregateOutputType | null
-    _min: PreorderMinAggregateOutputType | null
-    _max: PreorderMaxAggregateOutputType | null
+  export type AggregateKegiatan = {
+    _count: KegiatanCountAggregateOutputType | null
+    _avg: KegiatanAvgAggregateOutputType | null
+    _sum: KegiatanSumAggregateOutputType | null
+    _min: KegiatanMinAggregateOutputType | null
+    _max: KegiatanMaxAggregateOutputType | null
   }
 
-  export type PreorderAvgAggregateOutputType = {
-    id: number | null
-    qty: number | null
-  }
-
-  export type PreorderSumAggregateOutputType = {
-    id: number | null
-    qty: number | null
-  }
-
-  export type PreorderMinAggregateOutputType = {
-    id: number | null
-    order_date: Date | null
-    order_by: string | null
-    selected_package: string | null
-    qty: number | null
-    status: boolean | null
-  }
-
-  export type PreorderMaxAggregateOutputType = {
-    id: number | null
-    order_date: Date | null
-    order_by: string | null
-    selected_package: string | null
-    qty: number | null
-    status: boolean | null
-  }
-
-  export type PreorderCountAggregateOutputType = {
-    id: number
-    order_date: number
-    order_by: number
-    selected_package: number
-    qty: number
-    status: number
-    _all: number
-  }
-
-
-  export type PreorderAvgAggregateInputType = {
-    id?: true
-    qty?: true
-  }
-
-  export type PreorderSumAggregateInputType = {
-    id?: true
-    qty?: true
-  }
-
-  export type PreorderMinAggregateInputType = {
-    id?: true
-    order_date?: true
-    order_by?: true
-    selected_package?: true
-    qty?: true
-    status?: true
-  }
-
-  export type PreorderMaxAggregateInputType = {
-    id?: true
-    order_date?: true
-    order_by?: true
-    selected_package?: true
-    qty?: true
-    status?: true
-  }
-
-  export type PreorderCountAggregateInputType = {
-    id?: true
-    order_date?: true
-    order_by?: true
-    selected_package?: true
-    qty?: true
-    status?: true
-    _all?: true
-  }
-
-  export type PreorderAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Filter which preorder to aggregate.
-     */
-    where?: preorderWhereInput
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
-     * 
-     * Determine the order of preorders to fetch.
-     */
-    orderBy?: preorderOrderByWithRelationInput | preorderOrderByWithRelationInput[]
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
-     * 
-     * Sets the start position
-     */
-    cursor?: preorderWhereUniqueInput
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
-     * 
-     * Take `±n` preorders from the position of the cursor.
-     */
-    take?: number
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
-     * 
-     * Skip the first `n` preorders.
-     */
-    skip?: number
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
-     * 
-     * Count returned preorders
-    **/
-    _count?: true | PreorderCountAggregateInputType
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
-     * 
-     * Select which fields to average
-    **/
-    _avg?: PreorderAvgAggregateInputType
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
-     * 
-     * Select which fields to sum
-    **/
-    _sum?: PreorderSumAggregateInputType
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
-     * 
-     * Select which fields to find the minimum value
-    **/
-    _min?: PreorderMinAggregateInputType
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
-     * 
-     * Select which fields to find the maximum value
-    **/
-    _max?: PreorderMaxAggregateInputType
-  }
-
-  export type GetPreorderAggregateType<T extends PreorderAggregateArgs> = {
-        [P in keyof T & keyof AggregatePreorder]: P extends '_count' | 'count'
-      ? T[P] extends true
-        ? number
-        : GetScalarType<T[P], AggregatePreorder[P]>
-      : GetScalarType<T[P], AggregatePreorder[P]>
-  }
-
-
-
-
-  export type preorderGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: preorderWhereInput
-    orderBy?: preorderOrderByWithAggregationInput | preorderOrderByWithAggregationInput[]
-    by: PreorderScalarFieldEnum[] | PreorderScalarFieldEnum
-    having?: preorderScalarWhereWithAggregatesInput
-    take?: number
-    skip?: number
-    _count?: PreorderCountAggregateInputType | true
-    _avg?: PreorderAvgAggregateInputType
-    _sum?: PreorderSumAggregateInputType
-    _min?: PreorderMinAggregateInputType
-    _max?: PreorderMaxAggregateInputType
-  }
-
-  export type PreorderGroupByOutputType = {
-    id: number
-    order_date: Date
-    order_by: string
-    selected_package: string
-    qty: number
-    status: boolean
-    _count: PreorderCountAggregateOutputType | null
-    _avg: PreorderAvgAggregateOutputType | null
-    _sum: PreorderSumAggregateOutputType | null
-    _min: PreorderMinAggregateOutputType | null
-    _max: PreorderMaxAggregateOutputType | null
-  }
-
-  type GetPreorderGroupByPayload<T extends preorderGroupByArgs> = Prisma.PrismaPromise<
-    Array<
-      PickEnumerable<PreorderGroupByOutputType, T['by']> &
-        {
-          [P in ((keyof T) & (keyof PreorderGroupByOutputType))]: P extends '_count'
-            ? T[P] extends boolean
-              ? number
-              : GetScalarType<T[P], PreorderGroupByOutputType[P]>
-            : GetScalarType<T[P], PreorderGroupByOutputType[P]>
-        }
-      >
-    >
-
-
-  export type preorderSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean
-    order_date?: boolean
-    order_by?: boolean
-    selected_package?: boolean
-    qty?: boolean
-    status?: boolean
-  }, ExtArgs["result"]["preorder"]>
-
-  export type preorderSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean
-    order_date?: boolean
-    order_by?: boolean
-    selected_package?: boolean
-    qty?: boolean
-    status?: boolean
-  }, ExtArgs["result"]["preorder"]>
-
-  export type preorderSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean
-    order_date?: boolean
-    order_by?: boolean
-    selected_package?: boolean
-    qty?: boolean
-    status?: boolean
-  }, ExtArgs["result"]["preorder"]>
-
-  export type preorderSelectScalar = {
-    id?: boolean
-    order_date?: boolean
-    order_by?: boolean
-    selected_package?: boolean
-    qty?: boolean
-    status?: boolean
-  }
-
-  export type preorderOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "order_date" | "order_by" | "selected_package" | "qty" | "status", ExtArgs["result"]["preorder"]>
-
-  export type $preorderPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "preorder"
-    objects: {}
-    scalars: $Extensions.GetPayloadResult<{
-      id: number
-      order_date: Date
-      order_by: string
-      selected_package: string
-      qty: number
-      status: boolean
-    }, ExtArgs["result"]["preorder"]>
-    composites: {}
-  }
-
-  type preorderGetPayload<S extends boolean | null | undefined | preorderDefaultArgs> = $Result.GetResult<Prisma.$preorderPayload, S>
-
-  type preorderCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<preorderFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: PreorderCountAggregateInputType | true
-    }
-
-  export interface preorderDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['preorder'], meta: { name: 'preorder' } }
-    /**
-     * Find zero or one Preorder that matches the filter.
-     * @param {preorderFindUniqueArgs} args - Arguments to find a Preorder
-     * @example
-     * // Get one Preorder
-     * const preorder = await prisma.preorder.findUnique({
-     *   where: {
-     *     // ... provide filter here
-     *   }
-     * })
-     */
-    findUnique<T extends preorderFindUniqueArgs>(args: SelectSubset<T, preorderFindUniqueArgs<ExtArgs>>): Prisma__preorderClient<$Result.GetResult<Prisma.$preorderPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-
-    /**
-     * Find one Preorder that matches the filter or throw an error with `error.code='P2025'`
-     * if no matches were found.
-     * @param {preorderFindUniqueOrThrowArgs} args - Arguments to find a Preorder
-     * @example
-     * // Get one Preorder
-     * const preorder = await prisma.preorder.findUniqueOrThrow({
-     *   where: {
-     *     // ... provide filter here
-     *   }
-     * })
-     */
-    findUniqueOrThrow<T extends preorderFindUniqueOrThrowArgs>(args: SelectSubset<T, preorderFindUniqueOrThrowArgs<ExtArgs>>): Prisma__preorderClient<$Result.GetResult<Prisma.$preorderPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
-
-    /**
-     * Find the first Preorder that matches the filter.
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * @param {preorderFindFirstArgs} args - Arguments to find a Preorder
-     * @example
-     * // Get one Preorder
-     * const preorder = await prisma.preorder.findFirst({
-     *   where: {
-     *     // ... provide filter here
-     *   }
-     * })
-     */
-    findFirst<T extends preorderFindFirstArgs>(args?: SelectSubset<T, preorderFindFirstArgs<ExtArgs>>): Prisma__preorderClient<$Result.GetResult<Prisma.$preorderPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-
-    /**
-     * Find the first Preorder that matches the filter or
-     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * @param {preorderFindFirstOrThrowArgs} args - Arguments to find a Preorder
-     * @example
-     * // Get one Preorder
-     * const preorder = await prisma.preorder.findFirstOrThrow({
-     *   where: {
-     *     // ... provide filter here
-     *   }
-     * })
-     */
-    findFirstOrThrow<T extends preorderFindFirstOrThrowArgs>(args?: SelectSubset<T, preorderFindFirstOrThrowArgs<ExtArgs>>): Prisma__preorderClient<$Result.GetResult<Prisma.$preorderPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
-
-    /**
-     * Find zero or more Preorders that matches the filter.
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * @param {preorderFindManyArgs} args - Arguments to filter and select certain fields only.
-     * @example
-     * // Get all Preorders
-     * const preorders = await prisma.preorder.findMany()
-     * 
-     * // Get first 10 Preorders
-     * const preorders = await prisma.preorder.findMany({ take: 10 })
-     * 
-     * // Only select the `id`
-     * const preorderWithIdOnly = await prisma.preorder.findMany({ select: { id: true } })
-     * 
-     */
-    findMany<T extends preorderFindManyArgs>(args?: SelectSubset<T, preorderFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$preorderPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
-
-    /**
-     * Create a Preorder.
-     * @param {preorderCreateArgs} args - Arguments to create a Preorder.
-     * @example
-     * // Create one Preorder
-     * const Preorder = await prisma.preorder.create({
-     *   data: {
-     *     // ... data to create a Preorder
-     *   }
-     * })
-     * 
-     */
-    create<T extends preorderCreateArgs>(args: SelectSubset<T, preorderCreateArgs<ExtArgs>>): Prisma__preorderClient<$Result.GetResult<Prisma.$preorderPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
-
-    /**
-     * Create many Preorders.
-     * @param {preorderCreateManyArgs} args - Arguments to create many Preorders.
-     * @example
-     * // Create many Preorders
-     * const preorder = await prisma.preorder.createMany({
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     *     
-     */
-    createMany<T extends preorderCreateManyArgs>(args?: SelectSubset<T, preorderCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
-
-    /**
-     * Create many Preorders and returns the data saved in the database.
-     * @param {preorderCreateManyAndReturnArgs} args - Arguments to create many Preorders.
-     * @example
-     * // Create many Preorders
-     * const preorder = await prisma.preorder.createManyAndReturn({
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Create many Preorders and only return the `id`
-     * const preorderWithIdOnly = await prisma.preorder.createManyAndReturn({
-     *   select: { id: true },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    createManyAndReturn<T extends preorderCreateManyAndReturnArgs>(args?: SelectSubset<T, preorderCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$preorderPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
-
-    /**
-     * Delete a Preorder.
-     * @param {preorderDeleteArgs} args - Arguments to delete one Preorder.
-     * @example
-     * // Delete one Preorder
-     * const Preorder = await prisma.preorder.delete({
-     *   where: {
-     *     // ... filter to delete one Preorder
-     *   }
-     * })
-     * 
-     */
-    delete<T extends preorderDeleteArgs>(args: SelectSubset<T, preorderDeleteArgs<ExtArgs>>): Prisma__preorderClient<$Result.GetResult<Prisma.$preorderPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
-
-    /**
-     * Update one Preorder.
-     * @param {preorderUpdateArgs} args - Arguments to update one Preorder.
-     * @example
-     * // Update one Preorder
-     * const preorder = await prisma.preorder.update({
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: {
-     *     // ... provide data here
-     *   }
-     * })
-     * 
-     */
-    update<T extends preorderUpdateArgs>(args: SelectSubset<T, preorderUpdateArgs<ExtArgs>>): Prisma__preorderClient<$Result.GetResult<Prisma.$preorderPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
-
-    /**
-     * Delete zero or more Preorders.
-     * @param {preorderDeleteManyArgs} args - Arguments to filter Preorders to delete.
-     * @example
-     * // Delete a few Preorders
-     * const { count } = await prisma.preorder.deleteMany({
-     *   where: {
-     *     // ... provide filter here
-     *   }
-     * })
-     * 
-     */
-    deleteMany<T extends preorderDeleteManyArgs>(args?: SelectSubset<T, preorderDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
-
-    /**
-     * Update zero or more Preorders.
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * @param {preorderUpdateManyArgs} args - Arguments to update one or more rows.
-     * @example
-     * // Update many Preorders
-     * const preorder = await prisma.preorder.updateMany({
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: {
-     *     // ... provide data here
-     *   }
-     * })
-     * 
-     */
-    updateMany<T extends preorderUpdateManyArgs>(args: SelectSubset<T, preorderUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
-
-    /**
-     * Update zero or more Preorders and returns the data updated in the database.
-     * @param {preorderUpdateManyAndReturnArgs} args - Arguments to update many Preorders.
-     * @example
-     * // Update many Preorders
-     * const preorder = await prisma.preorder.updateManyAndReturn({
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Update zero or more Preorders and only return the `id`
-     * const preorderWithIdOnly = await prisma.preorder.updateManyAndReturn({
-     *   select: { id: true },
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    updateManyAndReturn<T extends preorderUpdateManyAndReturnArgs>(args: SelectSubset<T, preorderUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$preorderPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
-
-    /**
-     * Create or update one Preorder.
-     * @param {preorderUpsertArgs} args - Arguments to update or create a Preorder.
-     * @example
-     * // Update or create a Preorder
-     * const preorder = await prisma.preorder.upsert({
-     *   create: {
-     *     // ... data to create a Preorder
-     *   },
-     *   update: {
-     *     // ... in case it already exists, update
-     *   },
-     *   where: {
-     *     // ... the filter for the Preorder we want to update
-     *   }
-     * })
-     */
-    upsert<T extends preorderUpsertArgs>(args: SelectSubset<T, preorderUpsertArgs<ExtArgs>>): Prisma__preorderClient<$Result.GetResult<Prisma.$preorderPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
-
-
-    /**
-     * Count the number of Preorders.
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * @param {preorderCountArgs} args - Arguments to filter Preorders to count.
-     * @example
-     * // Count the number of Preorders
-     * const count = await prisma.preorder.count({
-     *   where: {
-     *     // ... the filter for the Preorders we want to count
-     *   }
-     * })
-    **/
-    count<T extends preorderCountArgs>(
-      args?: Subset<T, preorderCountArgs>,
-    ): Prisma.PrismaPromise<
-      T extends $Utils.Record<'select', any>
-        ? T['select'] extends true
-          ? number
-          : GetScalarType<T['select'], PreorderCountAggregateOutputType>
-        : number
-    >
-
-    /**
-     * Allows you to perform aggregations operations on a Preorder.
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * @param {PreorderAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
-     * @example
-     * // Ordered by age ascending
-     * // Where email contains prisma.io
-     * // Limited to the 10 users
-     * const aggregations = await prisma.user.aggregate({
-     *   _avg: {
-     *     age: true,
-     *   },
-     *   where: {
-     *     email: {
-     *       contains: "prisma.io",
-     *     },
-     *   },
-     *   orderBy: {
-     *     age: "asc",
-     *   },
-     *   take: 10,
-     * })
-    **/
-    aggregate<T extends PreorderAggregateArgs>(args: Subset<T, PreorderAggregateArgs>): Prisma.PrismaPromise<GetPreorderAggregateType<T>>
-
-    /**
-     * Group by Preorder.
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * @param {preorderGroupByArgs} args - Group by arguments.
-     * @example
-     * // Group by city, order by createdAt, get count
-     * const result = await prisma.user.groupBy({
-     *   by: ['city', 'createdAt'],
-     *   orderBy: {
-     *     createdAt: true
-     *   },
-     *   _count: {
-     *     _all: true
-     *   },
-     * })
-     * 
-    **/
-    groupBy<
-      T extends preorderGroupByArgs,
-      HasSelectOrTake extends Or<
-        Extends<'skip', Keys<T>>,
-        Extends<'take', Keys<T>>
-      >,
-      OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: preorderGroupByArgs['orderBy'] }
-        : { orderBy?: preorderGroupByArgs['orderBy'] },
-      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
-      ByFields extends MaybeTupleToUnion<T['by']>,
-      ByValid extends Has<ByFields, OrderFields>,
-      HavingFields extends GetHavingFields<T['having']>,
-      HavingValid extends Has<ByFields, HavingFields>,
-      ByEmpty extends T['by'] extends never[] ? True : False,
-      InputErrors extends ByEmpty extends True
-      ? `Error: "by" must not be empty.`
-      : HavingValid extends False
-      ? {
-          [P in HavingFields]: P extends ByFields
-            ? never
-            : P extends string
-            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
-            : [
-                Error,
-                'Field ',
-                P,
-                ` in "having" needs to be provided in "by"`,
-              ]
-        }[HavingFields]
-      : 'take' extends Keys<T>
-      ? 'orderBy' extends Keys<T>
-        ? ByValid extends True
-          ? {}
-          : {
-              [P in OrderFields]: P extends ByFields
-                ? never
-                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
-            }[OrderFields]
-        : 'Error: If you provide "take", you also need to provide "orderBy"'
-      : 'skip' extends Keys<T>
-      ? 'orderBy' extends Keys<T>
-        ? ByValid extends True
-          ? {}
-          : {
-              [P in OrderFields]: P extends ByFields
-                ? never
-                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
-            }[OrderFields]
-        : 'Error: If you provide "skip", you also need to provide "orderBy"'
-      : ByValid extends True
-      ? {}
-      : {
-          [P in OrderFields]: P extends ByFields
-            ? never
-            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
-        }[OrderFields]
-    >(args: SubsetIntersection<T, preorderGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetPreorderGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
-  /**
-   * Fields of the preorder model
-   */
-  readonly fields: preorderFieldRefs;
-  }
-
-  /**
-   * The delegate class that acts as a "Promise-like" for preorder.
-   * Why is this prefixed with `Prisma__`?
-   * Because we want to prevent naming conflicts as mentioned in
-   * https://github.com/prisma/prisma-client-js/issues/707
-   */
-  export interface Prisma__preorderClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
-    readonly [Symbol.toStringTag]: "PrismaPromise"
-    /**
-     * Attaches callbacks for the resolution and/or rejection of the Promise.
-     * @param onfulfilled The callback to execute when the Promise is resolved.
-     * @param onrejected The callback to execute when the Promise is rejected.
-     * @returns A Promise for the completion of which ever callback is executed.
-     */
-    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
-    /**
-     * Attaches a callback for only the rejection of the Promise.
-     * @param onrejected The callback to execute when the Promise is rejected.
-     * @returns A Promise for the completion of the callback.
-     */
-    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
-    /**
-     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
-     * resolved value cannot be modified from the callback.
-     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
-     * @returns A Promise for the completion of the callback.
-     */
-    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
-  }
-
-
-
-
-  /**
-   * Fields of the preorder model
-   */
-  interface preorderFieldRefs {
-    readonly id: FieldRef<"preorder", 'Int'>
-    readonly order_date: FieldRef<"preorder", 'DateTime'>
-    readonly order_by: FieldRef<"preorder", 'String'>
-    readonly selected_package: FieldRef<"preorder", 'String'>
-    readonly qty: FieldRef<"preorder", 'Int'>
-    readonly status: FieldRef<"preorder", 'Boolean'>
-  }
-    
-
-  // Custom InputTypes
-  /**
-   * preorder findUnique
-   */
-  export type preorderFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the preorder
-     */
-    select?: preorderSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the preorder
-     */
-    omit?: preorderOmit<ExtArgs> | null
-    /**
-     * Filter, which preorder to fetch.
-     */
-    where: preorderWhereUniqueInput
-  }
-
-  /**
-   * preorder findUniqueOrThrow
-   */
-  export type preorderFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the preorder
-     */
-    select?: preorderSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the preorder
-     */
-    omit?: preorderOmit<ExtArgs> | null
-    /**
-     * Filter, which preorder to fetch.
-     */
-    where: preorderWhereUniqueInput
-  }
-
-  /**
-   * preorder findFirst
-   */
-  export type preorderFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the preorder
-     */
-    select?: preorderSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the preorder
-     */
-    omit?: preorderOmit<ExtArgs> | null
-    /**
-     * Filter, which preorder to fetch.
-     */
-    where?: preorderWhereInput
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
-     * 
-     * Determine the order of preorders to fetch.
-     */
-    orderBy?: preorderOrderByWithRelationInput | preorderOrderByWithRelationInput[]
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
-     * 
-     * Sets the position for searching for preorders.
-     */
-    cursor?: preorderWhereUniqueInput
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
-     * 
-     * Take `±n` preorders from the position of the cursor.
-     */
-    take?: number
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
-     * 
-     * Skip the first `n` preorders.
-     */
-    skip?: number
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
-     * 
-     * Filter by unique combinations of preorders.
-     */
-    distinct?: PreorderScalarFieldEnum | PreorderScalarFieldEnum[]
-  }
-
-  /**
-   * preorder findFirstOrThrow
-   */
-  export type preorderFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the preorder
-     */
-    select?: preorderSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the preorder
-     */
-    omit?: preorderOmit<ExtArgs> | null
-    /**
-     * Filter, which preorder to fetch.
-     */
-    where?: preorderWhereInput
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
-     * 
-     * Determine the order of preorders to fetch.
-     */
-    orderBy?: preorderOrderByWithRelationInput | preorderOrderByWithRelationInput[]
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
-     * 
-     * Sets the position for searching for preorders.
-     */
-    cursor?: preorderWhereUniqueInput
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
-     * 
-     * Take `±n` preorders from the position of the cursor.
-     */
-    take?: number
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
-     * 
-     * Skip the first `n` preorders.
-     */
-    skip?: number
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
-     * 
-     * Filter by unique combinations of preorders.
-     */
-    distinct?: PreorderScalarFieldEnum | PreorderScalarFieldEnum[]
-  }
-
-  /**
-   * preorder findMany
-   */
-  export type preorderFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the preorder
-     */
-    select?: preorderSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the preorder
-     */
-    omit?: preorderOmit<ExtArgs> | null
-    /**
-     * Filter, which preorders to fetch.
-     */
-    where?: preorderWhereInput
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
-     * 
-     * Determine the order of preorders to fetch.
-     */
-    orderBy?: preorderOrderByWithRelationInput | preorderOrderByWithRelationInput[]
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
-     * 
-     * Sets the position for listing preorders.
-     */
-    cursor?: preorderWhereUniqueInput
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
-     * 
-     * Take `±n` preorders from the position of the cursor.
-     */
-    take?: number
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
-     * 
-     * Skip the first `n` preorders.
-     */
-    skip?: number
-    distinct?: PreorderScalarFieldEnum | PreorderScalarFieldEnum[]
-  }
-
-  /**
-   * preorder create
-   */
-  export type preorderCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the preorder
-     */
-    select?: preorderSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the preorder
-     */
-    omit?: preorderOmit<ExtArgs> | null
-    /**
-     * The data needed to create a preorder.
-     */
-    data: XOR<preorderCreateInput, preorderUncheckedCreateInput>
-  }
-
-  /**
-   * preorder createMany
-   */
-  export type preorderCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * The data used to create many preorders.
-     */
-    data: preorderCreateManyInput | preorderCreateManyInput[]
-  }
-
-  /**
-   * preorder createManyAndReturn
-   */
-  export type preorderCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the preorder
-     */
-    select?: preorderSelectCreateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the preorder
-     */
-    omit?: preorderOmit<ExtArgs> | null
-    /**
-     * The data used to create many preorders.
-     */
-    data: preorderCreateManyInput | preorderCreateManyInput[]
-  }
-
-  /**
-   * preorder update
-   */
-  export type preorderUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the preorder
-     */
-    select?: preorderSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the preorder
-     */
-    omit?: preorderOmit<ExtArgs> | null
-    /**
-     * The data needed to update a preorder.
-     */
-    data: XOR<preorderUpdateInput, preorderUncheckedUpdateInput>
-    /**
-     * Choose, which preorder to update.
-     */
-    where: preorderWhereUniqueInput
-  }
-
-  /**
-   * preorder updateMany
-   */
-  export type preorderUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * The data used to update preorders.
-     */
-    data: XOR<preorderUpdateManyMutationInput, preorderUncheckedUpdateManyInput>
-    /**
-     * Filter which preorders to update
-     */
-    where?: preorderWhereInput
-    /**
-     * Limit how many preorders to update.
-     */
-    limit?: number
-  }
-
-  /**
-   * preorder updateManyAndReturn
-   */
-  export type preorderUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the preorder
-     */
-    select?: preorderSelectUpdateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the preorder
-     */
-    omit?: preorderOmit<ExtArgs> | null
-    /**
-     * The data used to update preorders.
-     */
-    data: XOR<preorderUpdateManyMutationInput, preorderUncheckedUpdateManyInput>
-    /**
-     * Filter which preorders to update
-     */
-    where?: preorderWhereInput
-    /**
-     * Limit how many preorders to update.
-     */
-    limit?: number
-  }
-
-  /**
-   * preorder upsert
-   */
-  export type preorderUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the preorder
-     */
-    select?: preorderSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the preorder
-     */
-    omit?: preorderOmit<ExtArgs> | null
-    /**
-     * The filter to search for the preorder to update in case it exists.
-     */
-    where: preorderWhereUniqueInput
-    /**
-     * In case the preorder found by the `where` argument doesn't exist, create a new preorder with this data.
-     */
-    create: XOR<preorderCreateInput, preorderUncheckedCreateInput>
-    /**
-     * In case the preorder was found with the provided `where` argument, update it with this data.
-     */
-    update: XOR<preorderUpdateInput, preorderUncheckedUpdateInput>
-  }
-
-  /**
-   * preorder delete
-   */
-  export type preorderDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the preorder
-     */
-    select?: preorderSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the preorder
-     */
-    omit?: preorderOmit<ExtArgs> | null
-    /**
-     * Filter which preorder to delete.
-     */
-    where: preorderWhereUniqueInput
-  }
-
-  /**
-   * preorder deleteMany
-   */
-  export type preorderDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Filter which preorders to delete
-     */
-    where?: preorderWhereInput
-    /**
-     * Limit how many preorders to delete.
-     */
-    limit?: number
-  }
-
-  /**
-   * preorder without action
-   */
-  export type preorderDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the preorder
-     */
-    select?: preorderSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the preorder
-     */
-    omit?: preorderOmit<ExtArgs> | null
-  }
-
-
-  /**
-   * Model paket
-   */
-
-  export type AggregatePaket = {
-    _count: PaketCountAggregateOutputType | null
-    _avg: PaketAvgAggregateOutputType | null
-    _sum: PaketSumAggregateOutputType | null
-    _min: PaketMinAggregateOutputType | null
-    _max: PaketMaxAggregateOutputType | null
-  }
-
-  export type PaketAvgAggregateOutputType = {
+  export type KegiatanAvgAggregateOutputType = {
     id: number | null
   }
 
-  export type PaketSumAggregateOutputType = {
+  export type KegiatanSumAggregateOutputType = {
     id: number | null
   }
 
-  export type PaketMinAggregateOutputType = {
+  export type KegiatanMinAggregateOutputType = {
     id: number | null
-    kode: string | null
-    nama: string | null
+    judul_kegiatan: string | null
+    id_organisasi: string | null
+    tanggal_kegiatan: Date | null
+    lokasi: string | null
+    jenis_kegiatan: string | null
     deskripsi: string | null
+    tautan: string | null
   }
 
-  export type PaketMaxAggregateOutputType = {
+  export type KegiatanMaxAggregateOutputType = {
     id: number | null
-    kode: string | null
-    nama: string | null
+    judul_kegiatan: string | null
+    id_organisasi: string | null
+    tanggal_kegiatan: Date | null
+    lokasi: string | null
+    jenis_kegiatan: string | null
     deskripsi: string | null
+    tautan: string | null
   }
 
-  export type PaketCountAggregateOutputType = {
+  export type KegiatanCountAggregateOutputType = {
     id: number
-    kode: number
-    nama: number
+    judul_kegiatan: number
+    id_organisasi: number
+    tanggal_kegiatan: number
+    lokasi: number
+    jenis_kegiatan: number
     deskripsi: number
+    tautan: number
     _all: number
   }
 
 
-  export type PaketAvgAggregateInputType = {
+  export type KegiatanAvgAggregateInputType = {
     id?: true
   }
 
-  export type PaketSumAggregateInputType = {
+  export type KegiatanSumAggregateInputType = {
     id?: true
   }
 
-  export type PaketMinAggregateInputType = {
+  export type KegiatanMinAggregateInputType = {
     id?: true
-    kode?: true
-    nama?: true
+    judul_kegiatan?: true
+    id_organisasi?: true
+    tanggal_kegiatan?: true
+    lokasi?: true
+    jenis_kegiatan?: true
     deskripsi?: true
+    tautan?: true
   }
 
-  export type PaketMaxAggregateInputType = {
+  export type KegiatanMaxAggregateInputType = {
     id?: true
-    kode?: true
-    nama?: true
+    judul_kegiatan?: true
+    id_organisasi?: true
+    tanggal_kegiatan?: true
+    lokasi?: true
+    jenis_kegiatan?: true
     deskripsi?: true
+    tautan?: true
   }
 
-  export type PaketCountAggregateInputType = {
+  export type KegiatanCountAggregateInputType = {
     id?: true
-    kode?: true
-    nama?: true
+    judul_kegiatan?: true
+    id_organisasi?: true
+    tanggal_kegiatan?: true
+    lokasi?: true
+    jenis_kegiatan?: true
     deskripsi?: true
+    tautan?: true
     _all?: true
   }
 
-  export type PaketAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type KegiatanAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which paket to aggregate.
+     * Filter which kegiatan to aggregate.
      */
-    where?: paketWhereInput
+    where?: kegiatanWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of pakets to fetch.
+     * Determine the order of kegiatans to fetch.
      */
-    orderBy?: paketOrderByWithRelationInput | paketOrderByWithRelationInput[]
+    orderBy?: kegiatanOrderByWithRelationInput | kegiatanOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: paketWhereUniqueInput
+    cursor?: kegiatanWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` pakets from the position of the cursor.
+     * Take `±n` kegiatans from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` pakets.
+     * Skip the first `n` kegiatans.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned pakets
+     * Count returned kegiatans
     **/
-    _count?: true | PaketCountAggregateInputType
+    _count?: true | KegiatanCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: PaketAvgAggregateInputType
+    _avg?: KegiatanAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: PaketSumAggregateInputType
+    _sum?: KegiatanSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: PaketMinAggregateInputType
+    _min?: KegiatanMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: PaketMaxAggregateInputType
+    _max?: KegiatanMaxAggregateInputType
   }
 
-  export type GetPaketAggregateType<T extends PaketAggregateArgs> = {
-        [P in keyof T & keyof AggregatePaket]: P extends '_count' | 'count'
+  export type GetKegiatanAggregateType<T extends KegiatanAggregateArgs> = {
+        [P in keyof T & keyof AggregateKegiatan]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregatePaket[P]>
-      : GetScalarType<T[P], AggregatePaket[P]>
+        : GetScalarType<T[P], AggregateKegiatan[P]>
+      : GetScalarType<T[P], AggregateKegiatan[P]>
   }
 
 
 
 
-  export type paketGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: paketWhereInput
-    orderBy?: paketOrderByWithAggregationInput | paketOrderByWithAggregationInput[]
-    by: PaketScalarFieldEnum[] | PaketScalarFieldEnum
-    having?: paketScalarWhereWithAggregatesInput
+  export type kegiatanGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: kegiatanWhereInput
+    orderBy?: kegiatanOrderByWithAggregationInput | kegiatanOrderByWithAggregationInput[]
+    by: KegiatanScalarFieldEnum[] | KegiatanScalarFieldEnum
+    having?: kegiatanScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: PaketCountAggregateInputType | true
-    _avg?: PaketAvgAggregateInputType
-    _sum?: PaketSumAggregateInputType
-    _min?: PaketMinAggregateInputType
-    _max?: PaketMaxAggregateInputType
+    _count?: KegiatanCountAggregateInputType | true
+    _avg?: KegiatanAvgAggregateInputType
+    _sum?: KegiatanSumAggregateInputType
+    _min?: KegiatanMinAggregateInputType
+    _max?: KegiatanMaxAggregateInputType
   }
 
-  export type PaketGroupByOutputType = {
+  export type KegiatanGroupByOutputType = {
     id: number
-    kode: string
-    nama: string
+    judul_kegiatan: string
+    id_organisasi: string
+    tanggal_kegiatan: Date
+    lokasi: string
+    jenis_kegiatan: string
     deskripsi: string
-    _count: PaketCountAggregateOutputType | null
-    _avg: PaketAvgAggregateOutputType | null
-    _sum: PaketSumAggregateOutputType | null
-    _min: PaketMinAggregateOutputType | null
-    _max: PaketMaxAggregateOutputType | null
+    tautan: string
+    _count: KegiatanCountAggregateOutputType | null
+    _avg: KegiatanAvgAggregateOutputType | null
+    _sum: KegiatanSumAggregateOutputType | null
+    _min: KegiatanMinAggregateOutputType | null
+    _max: KegiatanMaxAggregateOutputType | null
   }
 
-  type GetPaketGroupByPayload<T extends paketGroupByArgs> = Prisma.PrismaPromise<
+  type GetKegiatanGroupByPayload<T extends kegiatanGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<PaketGroupByOutputType, T['by']> &
+      PickEnumerable<KegiatanGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof PaketGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof KegiatanGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], PaketGroupByOutputType[P]>
-            : GetScalarType<T[P], PaketGroupByOutputType[P]>
+              : GetScalarType<T[P], KegiatanGroupByOutputType[P]>
+            : GetScalarType<T[P], KegiatanGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type paketSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type kegiatanSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    kode?: boolean
-    nama?: boolean
+    judul_kegiatan?: boolean
+    id_organisasi?: boolean
+    tanggal_kegiatan?: boolean
+    lokasi?: boolean
+    jenis_kegiatan?: boolean
     deskripsi?: boolean
-  }, ExtArgs["result"]["paket"]>
+    tautan?: boolean
+  }, ExtArgs["result"]["kegiatan"]>
 
-  export type paketSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type kegiatanSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    kode?: boolean
-    nama?: boolean
+    judul_kegiatan?: boolean
+    id_organisasi?: boolean
+    tanggal_kegiatan?: boolean
+    lokasi?: boolean
+    jenis_kegiatan?: boolean
     deskripsi?: boolean
-  }, ExtArgs["result"]["paket"]>
+    tautan?: boolean
+  }, ExtArgs["result"]["kegiatan"]>
 
-  export type paketSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type kegiatanSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    kode?: boolean
-    nama?: boolean
+    judul_kegiatan?: boolean
+    id_organisasi?: boolean
+    tanggal_kegiatan?: boolean
+    lokasi?: boolean
+    jenis_kegiatan?: boolean
     deskripsi?: boolean
-  }, ExtArgs["result"]["paket"]>
+    tautan?: boolean
+  }, ExtArgs["result"]["kegiatan"]>
 
-  export type paketSelectScalar = {
+  export type kegiatanSelectScalar = {
     id?: boolean
-    kode?: boolean
-    nama?: boolean
+    judul_kegiatan?: boolean
+    id_organisasi?: boolean
+    tanggal_kegiatan?: boolean
+    lokasi?: boolean
+    jenis_kegiatan?: boolean
     deskripsi?: boolean
+    tautan?: boolean
   }
 
-  export type paketOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "kode" | "nama" | "deskripsi", ExtArgs["result"]["paket"]>
+  export type kegiatanOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "judul_kegiatan" | "id_organisasi" | "tanggal_kegiatan" | "lokasi" | "jenis_kegiatan" | "deskripsi" | "tautan", ExtArgs["result"]["kegiatan"]>
 
-  export type $paketPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "paket"
+  export type $kegiatanPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "kegiatan"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: number
-      kode: string
-      nama: string
+      judul_kegiatan: string
+      id_organisasi: string
+      tanggal_kegiatan: Date
+      lokasi: string
+      jenis_kegiatan: string
       deskripsi: string
-    }, ExtArgs["result"]["paket"]>
+      tautan: string
+    }, ExtArgs["result"]["kegiatan"]>
     composites: {}
   }
 
-  type paketGetPayload<S extends boolean | null | undefined | paketDefaultArgs> = $Result.GetResult<Prisma.$paketPayload, S>
+  type kegiatanGetPayload<S extends boolean | null | undefined | kegiatanDefaultArgs> = $Result.GetResult<Prisma.$kegiatanPayload, S>
 
-  type paketCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<paketFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: PaketCountAggregateInputType | true
+  type kegiatanCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<kegiatanFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: KegiatanCountAggregateInputType | true
     }
 
-  export interface paketDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['paket'], meta: { name: 'paket' } }
+  export interface kegiatanDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['kegiatan'], meta: { name: 'kegiatan' } }
     /**
-     * Find zero or one Paket that matches the filter.
-     * @param {paketFindUniqueArgs} args - Arguments to find a Paket
+     * Find zero or one Kegiatan that matches the filter.
+     * @param {kegiatanFindUniqueArgs} args - Arguments to find a Kegiatan
      * @example
-     * // Get one Paket
-     * const paket = await prisma.paket.findUnique({
+     * // Get one Kegiatan
+     * const kegiatan = await prisma.kegiatan.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends paketFindUniqueArgs>(args: SelectSubset<T, paketFindUniqueArgs<ExtArgs>>): Prisma__paketClient<$Result.GetResult<Prisma.$paketPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends kegiatanFindUniqueArgs>(args: SelectSubset<T, kegiatanFindUniqueArgs<ExtArgs>>): Prisma__kegiatanClient<$Result.GetResult<Prisma.$kegiatanPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Paket that matches the filter or throw an error with `error.code='P2025'`
+     * Find one Kegiatan that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {paketFindUniqueOrThrowArgs} args - Arguments to find a Paket
+     * @param {kegiatanFindUniqueOrThrowArgs} args - Arguments to find a Kegiatan
      * @example
-     * // Get one Paket
-     * const paket = await prisma.paket.findUniqueOrThrow({
+     * // Get one Kegiatan
+     * const kegiatan = await prisma.kegiatan.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends paketFindUniqueOrThrowArgs>(args: SelectSubset<T, paketFindUniqueOrThrowArgs<ExtArgs>>): Prisma__paketClient<$Result.GetResult<Prisma.$paketPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends kegiatanFindUniqueOrThrowArgs>(args: SelectSubset<T, kegiatanFindUniqueOrThrowArgs<ExtArgs>>): Prisma__kegiatanClient<$Result.GetResult<Prisma.$kegiatanPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Paket that matches the filter.
+     * Find the first Kegiatan that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {paketFindFirstArgs} args - Arguments to find a Paket
+     * @param {kegiatanFindFirstArgs} args - Arguments to find a Kegiatan
      * @example
-     * // Get one Paket
-     * const paket = await prisma.paket.findFirst({
+     * // Get one Kegiatan
+     * const kegiatan = await prisma.kegiatan.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends paketFindFirstArgs>(args?: SelectSubset<T, paketFindFirstArgs<ExtArgs>>): Prisma__paketClient<$Result.GetResult<Prisma.$paketPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends kegiatanFindFirstArgs>(args?: SelectSubset<T, kegiatanFindFirstArgs<ExtArgs>>): Prisma__kegiatanClient<$Result.GetResult<Prisma.$kegiatanPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Paket that matches the filter or
+     * Find the first Kegiatan that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {paketFindFirstOrThrowArgs} args - Arguments to find a Paket
+     * @param {kegiatanFindFirstOrThrowArgs} args - Arguments to find a Kegiatan
      * @example
-     * // Get one Paket
-     * const paket = await prisma.paket.findFirstOrThrow({
+     * // Get one Kegiatan
+     * const kegiatan = await prisma.kegiatan.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends paketFindFirstOrThrowArgs>(args?: SelectSubset<T, paketFindFirstOrThrowArgs<ExtArgs>>): Prisma__paketClient<$Result.GetResult<Prisma.$paketPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends kegiatanFindFirstOrThrowArgs>(args?: SelectSubset<T, kegiatanFindFirstOrThrowArgs<ExtArgs>>): Prisma__kegiatanClient<$Result.GetResult<Prisma.$kegiatanPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more Pakets that matches the filter.
+     * Find zero or more Kegiatans that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {paketFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {kegiatanFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Pakets
-     * const pakets = await prisma.paket.findMany()
+     * // Get all Kegiatans
+     * const kegiatans = await prisma.kegiatan.findMany()
      * 
-     * // Get first 10 Pakets
-     * const pakets = await prisma.paket.findMany({ take: 10 })
+     * // Get first 10 Kegiatans
+     * const kegiatans = await prisma.kegiatan.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const paketWithIdOnly = await prisma.paket.findMany({ select: { id: true } })
+     * const kegiatanWithIdOnly = await prisma.kegiatan.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends paketFindManyArgs>(args?: SelectSubset<T, paketFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$paketPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends kegiatanFindManyArgs>(args?: SelectSubset<T, kegiatanFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$kegiatanPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Paket.
-     * @param {paketCreateArgs} args - Arguments to create a Paket.
+     * Create a Kegiatan.
+     * @param {kegiatanCreateArgs} args - Arguments to create a Kegiatan.
      * @example
-     * // Create one Paket
-     * const Paket = await prisma.paket.create({
+     * // Create one Kegiatan
+     * const Kegiatan = await prisma.kegiatan.create({
      *   data: {
-     *     // ... data to create a Paket
+     *     // ... data to create a Kegiatan
      *   }
      * })
      * 
      */
-    create<T extends paketCreateArgs>(args: SelectSubset<T, paketCreateArgs<ExtArgs>>): Prisma__paketClient<$Result.GetResult<Prisma.$paketPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends kegiatanCreateArgs>(args: SelectSubset<T, kegiatanCreateArgs<ExtArgs>>): Prisma__kegiatanClient<$Result.GetResult<Prisma.$kegiatanPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many Pakets.
-     * @param {paketCreateManyArgs} args - Arguments to create many Pakets.
+     * Create many Kegiatans.
+     * @param {kegiatanCreateManyArgs} args - Arguments to create many Kegiatans.
      * @example
-     * // Create many Pakets
-     * const paket = await prisma.paket.createMany({
+     * // Create many Kegiatans
+     * const kegiatan = await prisma.kegiatan.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends paketCreateManyArgs>(args?: SelectSubset<T, paketCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends kegiatanCreateManyArgs>(args?: SelectSubset<T, kegiatanCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Pakets and returns the data saved in the database.
-     * @param {paketCreateManyAndReturnArgs} args - Arguments to create many Pakets.
+     * Create many Kegiatans and returns the data saved in the database.
+     * @param {kegiatanCreateManyAndReturnArgs} args - Arguments to create many Kegiatans.
      * @example
-     * // Create many Pakets
-     * const paket = await prisma.paket.createManyAndReturn({
+     * // Create many Kegiatans
+     * const kegiatan = await prisma.kegiatan.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Pakets and only return the `id`
-     * const paketWithIdOnly = await prisma.paket.createManyAndReturn({
+     * // Create many Kegiatans and only return the `id`
+     * const kegiatanWithIdOnly = await prisma.kegiatan.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -2457,28 +1370,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends paketCreateManyAndReturnArgs>(args?: SelectSubset<T, paketCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$paketPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends kegiatanCreateManyAndReturnArgs>(args?: SelectSubset<T, kegiatanCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$kegiatanPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Paket.
-     * @param {paketDeleteArgs} args - Arguments to delete one Paket.
+     * Delete a Kegiatan.
+     * @param {kegiatanDeleteArgs} args - Arguments to delete one Kegiatan.
      * @example
-     * // Delete one Paket
-     * const Paket = await prisma.paket.delete({
+     * // Delete one Kegiatan
+     * const Kegiatan = await prisma.kegiatan.delete({
      *   where: {
-     *     // ... filter to delete one Paket
+     *     // ... filter to delete one Kegiatan
      *   }
      * })
      * 
      */
-    delete<T extends paketDeleteArgs>(args: SelectSubset<T, paketDeleteArgs<ExtArgs>>): Prisma__paketClient<$Result.GetResult<Prisma.$paketPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends kegiatanDeleteArgs>(args: SelectSubset<T, kegiatanDeleteArgs<ExtArgs>>): Prisma__kegiatanClient<$Result.GetResult<Prisma.$kegiatanPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Paket.
-     * @param {paketUpdateArgs} args - Arguments to update one Paket.
+     * Update one Kegiatan.
+     * @param {kegiatanUpdateArgs} args - Arguments to update one Kegiatan.
      * @example
-     * // Update one Paket
-     * const paket = await prisma.paket.update({
+     * // Update one Kegiatan
+     * const kegiatan = await prisma.kegiatan.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2488,30 +1401,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends paketUpdateArgs>(args: SelectSubset<T, paketUpdateArgs<ExtArgs>>): Prisma__paketClient<$Result.GetResult<Prisma.$paketPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends kegiatanUpdateArgs>(args: SelectSubset<T, kegiatanUpdateArgs<ExtArgs>>): Prisma__kegiatanClient<$Result.GetResult<Prisma.$kegiatanPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more Pakets.
-     * @param {paketDeleteManyArgs} args - Arguments to filter Pakets to delete.
+     * Delete zero or more Kegiatans.
+     * @param {kegiatanDeleteManyArgs} args - Arguments to filter Kegiatans to delete.
      * @example
-     * // Delete a few Pakets
-     * const { count } = await prisma.paket.deleteMany({
+     * // Delete a few Kegiatans
+     * const { count } = await prisma.kegiatan.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends paketDeleteManyArgs>(args?: SelectSubset<T, paketDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends kegiatanDeleteManyArgs>(args?: SelectSubset<T, kegiatanDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Pakets.
+     * Update zero or more Kegiatans.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {paketUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {kegiatanUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Pakets
-     * const paket = await prisma.paket.updateMany({
+     * // Update many Kegiatans
+     * const kegiatan = await prisma.kegiatan.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2521,14 +1434,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends paketUpdateManyArgs>(args: SelectSubset<T, paketUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends kegiatanUpdateManyArgs>(args: SelectSubset<T, kegiatanUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Pakets and returns the data updated in the database.
-     * @param {paketUpdateManyAndReturnArgs} args - Arguments to update many Pakets.
+     * Update zero or more Kegiatans and returns the data updated in the database.
+     * @param {kegiatanUpdateManyAndReturnArgs} args - Arguments to update many Kegiatans.
      * @example
-     * // Update many Pakets
-     * const paket = await prisma.paket.updateManyAndReturn({
+     * // Update many Kegiatans
+     * const kegiatan = await prisma.kegiatan.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2537,8 +1450,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Pakets and only return the `id`
-     * const paketWithIdOnly = await prisma.paket.updateManyAndReturn({
+     * // Update zero or more Kegiatans and only return the `id`
+     * const kegiatanWithIdOnly = await prisma.kegiatan.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -2551,56 +1464,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends paketUpdateManyAndReturnArgs>(args: SelectSubset<T, paketUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$paketPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends kegiatanUpdateManyAndReturnArgs>(args: SelectSubset<T, kegiatanUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$kegiatanPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Paket.
-     * @param {paketUpsertArgs} args - Arguments to update or create a Paket.
+     * Create or update one Kegiatan.
+     * @param {kegiatanUpsertArgs} args - Arguments to update or create a Kegiatan.
      * @example
-     * // Update or create a Paket
-     * const paket = await prisma.paket.upsert({
+     * // Update or create a Kegiatan
+     * const kegiatan = await prisma.kegiatan.upsert({
      *   create: {
-     *     // ... data to create a Paket
+     *     // ... data to create a Kegiatan
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Paket we want to update
+     *     // ... the filter for the Kegiatan we want to update
      *   }
      * })
      */
-    upsert<T extends paketUpsertArgs>(args: SelectSubset<T, paketUpsertArgs<ExtArgs>>): Prisma__paketClient<$Result.GetResult<Prisma.$paketPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends kegiatanUpsertArgs>(args: SelectSubset<T, kegiatanUpsertArgs<ExtArgs>>): Prisma__kegiatanClient<$Result.GetResult<Prisma.$kegiatanPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of Pakets.
+     * Count the number of Kegiatans.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {paketCountArgs} args - Arguments to filter Pakets to count.
+     * @param {kegiatanCountArgs} args - Arguments to filter Kegiatans to count.
      * @example
-     * // Count the number of Pakets
-     * const count = await prisma.paket.count({
+     * // Count the number of Kegiatans
+     * const count = await prisma.kegiatan.count({
      *   where: {
-     *     // ... the filter for the Pakets we want to count
+     *     // ... the filter for the Kegiatans we want to count
      *   }
      * })
     **/
-    count<T extends paketCountArgs>(
-      args?: Subset<T, paketCountArgs>,
+    count<T extends kegiatanCountArgs>(
+      args?: Subset<T, kegiatanCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], PaketCountAggregateOutputType>
+          : GetScalarType<T['select'], KegiatanCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Paket.
+     * Allows you to perform aggregations operations on a Kegiatan.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {PaketAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {KegiatanAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -2620,13 +1533,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends PaketAggregateArgs>(args: Subset<T, PaketAggregateArgs>): Prisma.PrismaPromise<GetPaketAggregateType<T>>
+    aggregate<T extends KegiatanAggregateArgs>(args: Subset<T, KegiatanAggregateArgs>): Prisma.PrismaPromise<GetKegiatanAggregateType<T>>
 
     /**
-     * Group by Paket.
+     * Group by Kegiatan.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {paketGroupByArgs} args - Group by arguments.
+     * @param {kegiatanGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -2641,14 +1554,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends paketGroupByArgs,
+      T extends kegiatanGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: paketGroupByArgs['orderBy'] }
-        : { orderBy?: paketGroupByArgs['orderBy'] },
+        ? { orderBy: kegiatanGroupByArgs['orderBy'] }
+        : { orderBy?: kegiatanGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -2697,20 +1610,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, paketGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetPaketGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, kegiatanGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetKegiatanGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the paket model
+   * Fields of the kegiatan model
    */
-  readonly fields: paketFieldRefs;
+  readonly fields: kegiatanFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for paket.
+   * The delegate class that acts as a "Promise-like" for kegiatan.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__paketClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__kegiatanClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -2738,742 +1651,758 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the paket model
+   * Fields of the kegiatan model
    */
-  interface paketFieldRefs {
-    readonly id: FieldRef<"paket", 'Int'>
-    readonly kode: FieldRef<"paket", 'String'>
-    readonly nama: FieldRef<"paket", 'String'>
-    readonly deskripsi: FieldRef<"paket", 'String'>
+  interface kegiatanFieldRefs {
+    readonly id: FieldRef<"kegiatan", 'Int'>
+    readonly judul_kegiatan: FieldRef<"kegiatan", 'String'>
+    readonly id_organisasi: FieldRef<"kegiatan", 'String'>
+    readonly tanggal_kegiatan: FieldRef<"kegiatan", 'DateTime'>
+    readonly lokasi: FieldRef<"kegiatan", 'String'>
+    readonly jenis_kegiatan: FieldRef<"kegiatan", 'String'>
+    readonly deskripsi: FieldRef<"kegiatan", 'String'>
+    readonly tautan: FieldRef<"kegiatan", 'String'>
   }
     
 
   // Custom InputTypes
   /**
-   * paket findUnique
+   * kegiatan findUnique
    */
-  export type paketFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type kegiatanFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the paket
+     * Select specific fields to fetch from the kegiatan
      */
-    select?: paketSelect<ExtArgs> | null
+    select?: kegiatanSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the paket
+     * Omit specific fields from the kegiatan
      */
-    omit?: paketOmit<ExtArgs> | null
+    omit?: kegiatanOmit<ExtArgs> | null
     /**
-     * Filter, which paket to fetch.
+     * Filter, which kegiatan to fetch.
      */
-    where: paketWhereUniqueInput
+    where: kegiatanWhereUniqueInput
   }
 
   /**
-   * paket findUniqueOrThrow
+   * kegiatan findUniqueOrThrow
    */
-  export type paketFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type kegiatanFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the paket
+     * Select specific fields to fetch from the kegiatan
      */
-    select?: paketSelect<ExtArgs> | null
+    select?: kegiatanSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the paket
+     * Omit specific fields from the kegiatan
      */
-    omit?: paketOmit<ExtArgs> | null
+    omit?: kegiatanOmit<ExtArgs> | null
     /**
-     * Filter, which paket to fetch.
+     * Filter, which kegiatan to fetch.
      */
-    where: paketWhereUniqueInput
+    where: kegiatanWhereUniqueInput
   }
 
   /**
-   * paket findFirst
+   * kegiatan findFirst
    */
-  export type paketFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type kegiatanFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the paket
+     * Select specific fields to fetch from the kegiatan
      */
-    select?: paketSelect<ExtArgs> | null
+    select?: kegiatanSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the paket
+     * Omit specific fields from the kegiatan
      */
-    omit?: paketOmit<ExtArgs> | null
+    omit?: kegiatanOmit<ExtArgs> | null
     /**
-     * Filter, which paket to fetch.
+     * Filter, which kegiatan to fetch.
      */
-    where?: paketWhereInput
+    where?: kegiatanWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of pakets to fetch.
+     * Determine the order of kegiatans to fetch.
      */
-    orderBy?: paketOrderByWithRelationInput | paketOrderByWithRelationInput[]
+    orderBy?: kegiatanOrderByWithRelationInput | kegiatanOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for pakets.
+     * Sets the position for searching for kegiatans.
      */
-    cursor?: paketWhereUniqueInput
+    cursor?: kegiatanWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` pakets from the position of the cursor.
+     * Take `±n` kegiatans from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` pakets.
+     * Skip the first `n` kegiatans.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of pakets.
+     * Filter by unique combinations of kegiatans.
      */
-    distinct?: PaketScalarFieldEnum | PaketScalarFieldEnum[]
+    distinct?: KegiatanScalarFieldEnum | KegiatanScalarFieldEnum[]
   }
 
   /**
-   * paket findFirstOrThrow
+   * kegiatan findFirstOrThrow
    */
-  export type paketFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type kegiatanFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the paket
+     * Select specific fields to fetch from the kegiatan
      */
-    select?: paketSelect<ExtArgs> | null
+    select?: kegiatanSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the paket
+     * Omit specific fields from the kegiatan
      */
-    omit?: paketOmit<ExtArgs> | null
+    omit?: kegiatanOmit<ExtArgs> | null
     /**
-     * Filter, which paket to fetch.
+     * Filter, which kegiatan to fetch.
      */
-    where?: paketWhereInput
+    where?: kegiatanWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of pakets to fetch.
+     * Determine the order of kegiatans to fetch.
      */
-    orderBy?: paketOrderByWithRelationInput | paketOrderByWithRelationInput[]
+    orderBy?: kegiatanOrderByWithRelationInput | kegiatanOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for pakets.
+     * Sets the position for searching for kegiatans.
      */
-    cursor?: paketWhereUniqueInput
+    cursor?: kegiatanWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` pakets from the position of the cursor.
+     * Take `±n` kegiatans from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` pakets.
+     * Skip the first `n` kegiatans.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of pakets.
+     * Filter by unique combinations of kegiatans.
      */
-    distinct?: PaketScalarFieldEnum | PaketScalarFieldEnum[]
+    distinct?: KegiatanScalarFieldEnum | KegiatanScalarFieldEnum[]
   }
 
   /**
-   * paket findMany
+   * kegiatan findMany
    */
-  export type paketFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type kegiatanFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the paket
+     * Select specific fields to fetch from the kegiatan
      */
-    select?: paketSelect<ExtArgs> | null
+    select?: kegiatanSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the paket
+     * Omit specific fields from the kegiatan
      */
-    omit?: paketOmit<ExtArgs> | null
+    omit?: kegiatanOmit<ExtArgs> | null
     /**
-     * Filter, which pakets to fetch.
+     * Filter, which kegiatans to fetch.
      */
-    where?: paketWhereInput
+    where?: kegiatanWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of pakets to fetch.
+     * Determine the order of kegiatans to fetch.
      */
-    orderBy?: paketOrderByWithRelationInput | paketOrderByWithRelationInput[]
+    orderBy?: kegiatanOrderByWithRelationInput | kegiatanOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing pakets.
+     * Sets the position for listing kegiatans.
      */
-    cursor?: paketWhereUniqueInput
+    cursor?: kegiatanWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` pakets from the position of the cursor.
+     * Take `±n` kegiatans from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` pakets.
+     * Skip the first `n` kegiatans.
      */
     skip?: number
-    distinct?: PaketScalarFieldEnum | PaketScalarFieldEnum[]
+    distinct?: KegiatanScalarFieldEnum | KegiatanScalarFieldEnum[]
   }
 
   /**
-   * paket create
+   * kegiatan create
    */
-  export type paketCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type kegiatanCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the paket
+     * Select specific fields to fetch from the kegiatan
      */
-    select?: paketSelect<ExtArgs> | null
+    select?: kegiatanSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the paket
+     * Omit specific fields from the kegiatan
      */
-    omit?: paketOmit<ExtArgs> | null
+    omit?: kegiatanOmit<ExtArgs> | null
     /**
-     * The data needed to create a paket.
+     * The data needed to create a kegiatan.
      */
-    data: XOR<paketCreateInput, paketUncheckedCreateInput>
+    data: XOR<kegiatanCreateInput, kegiatanUncheckedCreateInput>
   }
 
   /**
-   * paket createMany
+   * kegiatan createMany
    */
-  export type paketCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type kegiatanCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many pakets.
+     * The data used to create many kegiatans.
      */
-    data: paketCreateManyInput | paketCreateManyInput[]
+    data: kegiatanCreateManyInput | kegiatanCreateManyInput[]
   }
 
   /**
-   * paket createManyAndReturn
+   * kegiatan createManyAndReturn
    */
-  export type paketCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type kegiatanCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the paket
+     * Select specific fields to fetch from the kegiatan
      */
-    select?: paketSelectCreateManyAndReturn<ExtArgs> | null
+    select?: kegiatanSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the paket
+     * Omit specific fields from the kegiatan
      */
-    omit?: paketOmit<ExtArgs> | null
+    omit?: kegiatanOmit<ExtArgs> | null
     /**
-     * The data used to create many pakets.
+     * The data used to create many kegiatans.
      */
-    data: paketCreateManyInput | paketCreateManyInput[]
+    data: kegiatanCreateManyInput | kegiatanCreateManyInput[]
   }
 
   /**
-   * paket update
+   * kegiatan update
    */
-  export type paketUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type kegiatanUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the paket
+     * Select specific fields to fetch from the kegiatan
      */
-    select?: paketSelect<ExtArgs> | null
+    select?: kegiatanSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the paket
+     * Omit specific fields from the kegiatan
      */
-    omit?: paketOmit<ExtArgs> | null
+    omit?: kegiatanOmit<ExtArgs> | null
     /**
-     * The data needed to update a paket.
+     * The data needed to update a kegiatan.
      */
-    data: XOR<paketUpdateInput, paketUncheckedUpdateInput>
+    data: XOR<kegiatanUpdateInput, kegiatanUncheckedUpdateInput>
     /**
-     * Choose, which paket to update.
+     * Choose, which kegiatan to update.
      */
-    where: paketWhereUniqueInput
+    where: kegiatanWhereUniqueInput
   }
 
   /**
-   * paket updateMany
+   * kegiatan updateMany
    */
-  export type paketUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type kegiatanUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update pakets.
+     * The data used to update kegiatans.
      */
-    data: XOR<paketUpdateManyMutationInput, paketUncheckedUpdateManyInput>
+    data: XOR<kegiatanUpdateManyMutationInput, kegiatanUncheckedUpdateManyInput>
     /**
-     * Filter which pakets to update
+     * Filter which kegiatans to update
      */
-    where?: paketWhereInput
+    where?: kegiatanWhereInput
     /**
-     * Limit how many pakets to update.
+     * Limit how many kegiatans to update.
      */
     limit?: number
   }
 
   /**
-   * paket updateManyAndReturn
+   * kegiatan updateManyAndReturn
    */
-  export type paketUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type kegiatanUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the paket
+     * Select specific fields to fetch from the kegiatan
      */
-    select?: paketSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: kegiatanSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the paket
+     * Omit specific fields from the kegiatan
      */
-    omit?: paketOmit<ExtArgs> | null
+    omit?: kegiatanOmit<ExtArgs> | null
     /**
-     * The data used to update pakets.
+     * The data used to update kegiatans.
      */
-    data: XOR<paketUpdateManyMutationInput, paketUncheckedUpdateManyInput>
+    data: XOR<kegiatanUpdateManyMutationInput, kegiatanUncheckedUpdateManyInput>
     /**
-     * Filter which pakets to update
+     * Filter which kegiatans to update
      */
-    where?: paketWhereInput
+    where?: kegiatanWhereInput
     /**
-     * Limit how many pakets to update.
+     * Limit how many kegiatans to update.
      */
     limit?: number
   }
 
   /**
-   * paket upsert
+   * kegiatan upsert
    */
-  export type paketUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type kegiatanUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the paket
+     * Select specific fields to fetch from the kegiatan
      */
-    select?: paketSelect<ExtArgs> | null
+    select?: kegiatanSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the paket
+     * Omit specific fields from the kegiatan
      */
-    omit?: paketOmit<ExtArgs> | null
+    omit?: kegiatanOmit<ExtArgs> | null
     /**
-     * The filter to search for the paket to update in case it exists.
+     * The filter to search for the kegiatan to update in case it exists.
      */
-    where: paketWhereUniqueInput
+    where: kegiatanWhereUniqueInput
     /**
-     * In case the paket found by the `where` argument doesn't exist, create a new paket with this data.
+     * In case the kegiatan found by the `where` argument doesn't exist, create a new kegiatan with this data.
      */
-    create: XOR<paketCreateInput, paketUncheckedCreateInput>
+    create: XOR<kegiatanCreateInput, kegiatanUncheckedCreateInput>
     /**
-     * In case the paket was found with the provided `where` argument, update it with this data.
+     * In case the kegiatan was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<paketUpdateInput, paketUncheckedUpdateInput>
+    update: XOR<kegiatanUpdateInput, kegiatanUncheckedUpdateInput>
   }
 
   /**
-   * paket delete
+   * kegiatan delete
    */
-  export type paketDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type kegiatanDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the paket
+     * Select specific fields to fetch from the kegiatan
      */
-    select?: paketSelect<ExtArgs> | null
+    select?: kegiatanSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the paket
+     * Omit specific fields from the kegiatan
      */
-    omit?: paketOmit<ExtArgs> | null
+    omit?: kegiatanOmit<ExtArgs> | null
     /**
-     * Filter which paket to delete.
+     * Filter which kegiatan to delete.
      */
-    where: paketWhereUniqueInput
+    where: kegiatanWhereUniqueInput
   }
 
   /**
-   * paket deleteMany
+   * kegiatan deleteMany
    */
-  export type paketDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type kegiatanDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which pakets to delete
+     * Filter which kegiatans to delete
      */
-    where?: paketWhereInput
+    where?: kegiatanWhereInput
     /**
-     * Limit how many pakets to delete.
+     * Limit how many kegiatans to delete.
      */
     limit?: number
   }
 
   /**
-   * paket without action
+   * kegiatan without action
    */
-  export type paketDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type kegiatanDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the paket
+     * Select specific fields to fetch from the kegiatan
      */
-    select?: paketSelect<ExtArgs> | null
+    select?: kegiatanSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the paket
+     * Omit specific fields from the kegiatan
      */
-    omit?: paketOmit<ExtArgs> | null
+    omit?: kegiatanOmit<ExtArgs> | null
   }
 
 
   /**
-   * Model customer
+   * Model organisasi
    */
 
-  export type AggregateCustomer = {
-    _count: CustomerCountAggregateOutputType | null
-    _avg: CustomerAvgAggregateOutputType | null
-    _sum: CustomerSumAggregateOutputType | null
-    _min: CustomerMinAggregateOutputType | null
-    _max: CustomerMaxAggregateOutputType | null
+  export type AggregateOrganisasi = {
+    _count: OrganisasiCountAggregateOutputType | null
+    _avg: OrganisasiAvgAggregateOutputType | null
+    _sum: OrganisasiSumAggregateOutputType | null
+    _min: OrganisasiMinAggregateOutputType | null
+    _max: OrganisasiMaxAggregateOutputType | null
   }
 
-  export type CustomerAvgAggregateOutputType = {
+  export type OrganisasiAvgAggregateOutputType = {
     id: number | null
   }
 
-  export type CustomerSumAggregateOutputType = {
+  export type OrganisasiSumAggregateOutputType = {
     id: number | null
   }
 
-  export type CustomerMinAggregateOutputType = {
+  export type OrganisasiMinAggregateOutputType = {
     id: number | null
-    nama: string | null
-    phone: string | null
-    email: string | null
-    createdat: Date | null
+    nama_organisasi: string | null
+    ketua_organisasi: string | null
+    no_kontak: string | null
+    tahun_dibentuk: Date | null
+    pembina: string | null
   }
 
-  export type CustomerMaxAggregateOutputType = {
+  export type OrganisasiMaxAggregateOutputType = {
     id: number | null
-    nama: string | null
-    phone: string | null
-    email: string | null
-    createdat: Date | null
+    nama_organisasi: string | null
+    ketua_organisasi: string | null
+    no_kontak: string | null
+    tahun_dibentuk: Date | null
+    pembina: string | null
   }
 
-  export type CustomerCountAggregateOutputType = {
+  export type OrganisasiCountAggregateOutputType = {
     id: number
-    nama: number
-    phone: number
-    email: number
-    createdat: number
+    nama_organisasi: number
+    ketua_organisasi: number
+    no_kontak: number
+    tahun_dibentuk: number
+    pembina: number
     _all: number
   }
 
 
-  export type CustomerAvgAggregateInputType = {
+  export type OrganisasiAvgAggregateInputType = {
     id?: true
   }
 
-  export type CustomerSumAggregateInputType = {
+  export type OrganisasiSumAggregateInputType = {
     id?: true
   }
 
-  export type CustomerMinAggregateInputType = {
+  export type OrganisasiMinAggregateInputType = {
     id?: true
-    nama?: true
-    phone?: true
-    email?: true
-    createdat?: true
+    nama_organisasi?: true
+    ketua_organisasi?: true
+    no_kontak?: true
+    tahun_dibentuk?: true
+    pembina?: true
   }
 
-  export type CustomerMaxAggregateInputType = {
+  export type OrganisasiMaxAggregateInputType = {
     id?: true
-    nama?: true
-    phone?: true
-    email?: true
-    createdat?: true
+    nama_organisasi?: true
+    ketua_organisasi?: true
+    no_kontak?: true
+    tahun_dibentuk?: true
+    pembina?: true
   }
 
-  export type CustomerCountAggregateInputType = {
+  export type OrganisasiCountAggregateInputType = {
     id?: true
-    nama?: true
-    phone?: true
-    email?: true
-    createdat?: true
+    nama_organisasi?: true
+    ketua_organisasi?: true
+    no_kontak?: true
+    tahun_dibentuk?: true
+    pembina?: true
     _all?: true
   }
 
-  export type CustomerAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type OrganisasiAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which customer to aggregate.
+     * Filter which organisasi to aggregate.
      */
-    where?: customerWhereInput
+    where?: organisasiWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of customers to fetch.
+     * Determine the order of organisasis to fetch.
      */
-    orderBy?: customerOrderByWithRelationInput | customerOrderByWithRelationInput[]
+    orderBy?: organisasiOrderByWithRelationInput | organisasiOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: customerWhereUniqueInput
+    cursor?: organisasiWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` customers from the position of the cursor.
+     * Take `±n` organisasis from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` customers.
+     * Skip the first `n` organisasis.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned customers
+     * Count returned organisasis
     **/
-    _count?: true | CustomerCountAggregateInputType
+    _count?: true | OrganisasiCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: CustomerAvgAggregateInputType
+    _avg?: OrganisasiAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: CustomerSumAggregateInputType
+    _sum?: OrganisasiSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: CustomerMinAggregateInputType
+    _min?: OrganisasiMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: CustomerMaxAggregateInputType
+    _max?: OrganisasiMaxAggregateInputType
   }
 
-  export type GetCustomerAggregateType<T extends CustomerAggregateArgs> = {
-        [P in keyof T & keyof AggregateCustomer]: P extends '_count' | 'count'
+  export type GetOrganisasiAggregateType<T extends OrganisasiAggregateArgs> = {
+        [P in keyof T & keyof AggregateOrganisasi]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateCustomer[P]>
-      : GetScalarType<T[P], AggregateCustomer[P]>
+        : GetScalarType<T[P], AggregateOrganisasi[P]>
+      : GetScalarType<T[P], AggregateOrganisasi[P]>
   }
 
 
 
 
-  export type customerGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: customerWhereInput
-    orderBy?: customerOrderByWithAggregationInput | customerOrderByWithAggregationInput[]
-    by: CustomerScalarFieldEnum[] | CustomerScalarFieldEnum
-    having?: customerScalarWhereWithAggregatesInput
+  export type organisasiGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: organisasiWhereInput
+    orderBy?: organisasiOrderByWithAggregationInput | organisasiOrderByWithAggregationInput[]
+    by: OrganisasiScalarFieldEnum[] | OrganisasiScalarFieldEnum
+    having?: organisasiScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: CustomerCountAggregateInputType | true
-    _avg?: CustomerAvgAggregateInputType
-    _sum?: CustomerSumAggregateInputType
-    _min?: CustomerMinAggregateInputType
-    _max?: CustomerMaxAggregateInputType
+    _count?: OrganisasiCountAggregateInputType | true
+    _avg?: OrganisasiAvgAggregateInputType
+    _sum?: OrganisasiSumAggregateInputType
+    _min?: OrganisasiMinAggregateInputType
+    _max?: OrganisasiMaxAggregateInputType
   }
 
-  export type CustomerGroupByOutputType = {
+  export type OrganisasiGroupByOutputType = {
     id: number
-    nama: string
-    phone: string
-    email: string
-    createdat: Date
-    _count: CustomerCountAggregateOutputType | null
-    _avg: CustomerAvgAggregateOutputType | null
-    _sum: CustomerSumAggregateOutputType | null
-    _min: CustomerMinAggregateOutputType | null
-    _max: CustomerMaxAggregateOutputType | null
+    nama_organisasi: string
+    ketua_organisasi: string
+    no_kontak: string
+    tahun_dibentuk: Date
+    pembina: string
+    _count: OrganisasiCountAggregateOutputType | null
+    _avg: OrganisasiAvgAggregateOutputType | null
+    _sum: OrganisasiSumAggregateOutputType | null
+    _min: OrganisasiMinAggregateOutputType | null
+    _max: OrganisasiMaxAggregateOutputType | null
   }
 
-  type GetCustomerGroupByPayload<T extends customerGroupByArgs> = Prisma.PrismaPromise<
+  type GetOrganisasiGroupByPayload<T extends organisasiGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<CustomerGroupByOutputType, T['by']> &
+      PickEnumerable<OrganisasiGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof CustomerGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof OrganisasiGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], CustomerGroupByOutputType[P]>
-            : GetScalarType<T[P], CustomerGroupByOutputType[P]>
+              : GetScalarType<T[P], OrganisasiGroupByOutputType[P]>
+            : GetScalarType<T[P], OrganisasiGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type customerSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type organisasiSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    nama?: boolean
-    phone?: boolean
-    email?: boolean
-    createdat?: boolean
-  }, ExtArgs["result"]["customer"]>
+    nama_organisasi?: boolean
+    ketua_organisasi?: boolean
+    no_kontak?: boolean
+    tahun_dibentuk?: boolean
+    pembina?: boolean
+  }, ExtArgs["result"]["organisasi"]>
 
-  export type customerSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type organisasiSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    nama?: boolean
-    phone?: boolean
-    email?: boolean
-    createdat?: boolean
-  }, ExtArgs["result"]["customer"]>
+    nama_organisasi?: boolean
+    ketua_organisasi?: boolean
+    no_kontak?: boolean
+    tahun_dibentuk?: boolean
+    pembina?: boolean
+  }, ExtArgs["result"]["organisasi"]>
 
-  export type customerSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type organisasiSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    nama?: boolean
-    phone?: boolean
-    email?: boolean
-    createdat?: boolean
-  }, ExtArgs["result"]["customer"]>
+    nama_organisasi?: boolean
+    ketua_organisasi?: boolean
+    no_kontak?: boolean
+    tahun_dibentuk?: boolean
+    pembina?: boolean
+  }, ExtArgs["result"]["organisasi"]>
 
-  export type customerSelectScalar = {
+  export type organisasiSelectScalar = {
     id?: boolean
-    nama?: boolean
-    phone?: boolean
-    email?: boolean
-    createdat?: boolean
+    nama_organisasi?: boolean
+    ketua_organisasi?: boolean
+    no_kontak?: boolean
+    tahun_dibentuk?: boolean
+    pembina?: boolean
   }
 
-  export type customerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "nama" | "phone" | "email" | "createdat", ExtArgs["result"]["customer"]>
+  export type organisasiOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "nama_organisasi" | "ketua_organisasi" | "no_kontak" | "tahun_dibentuk" | "pembina", ExtArgs["result"]["organisasi"]>
 
-  export type $customerPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "customer"
+  export type $organisasiPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "organisasi"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: number
-      nama: string
-      phone: string
-      email: string
-      createdat: Date
-    }, ExtArgs["result"]["customer"]>
+      nama_organisasi: string
+      ketua_organisasi: string
+      no_kontak: string
+      tahun_dibentuk: Date
+      pembina: string
+    }, ExtArgs["result"]["organisasi"]>
     composites: {}
   }
 
-  type customerGetPayload<S extends boolean | null | undefined | customerDefaultArgs> = $Result.GetResult<Prisma.$customerPayload, S>
+  type organisasiGetPayload<S extends boolean | null | undefined | organisasiDefaultArgs> = $Result.GetResult<Prisma.$organisasiPayload, S>
 
-  type customerCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<customerFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: CustomerCountAggregateInputType | true
+  type organisasiCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<organisasiFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: OrganisasiCountAggregateInputType | true
     }
 
-  export interface customerDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['customer'], meta: { name: 'customer' } }
+  export interface organisasiDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['organisasi'], meta: { name: 'organisasi' } }
     /**
-     * Find zero or one Customer that matches the filter.
-     * @param {customerFindUniqueArgs} args - Arguments to find a Customer
+     * Find zero or one Organisasi that matches the filter.
+     * @param {organisasiFindUniqueArgs} args - Arguments to find a Organisasi
      * @example
-     * // Get one Customer
-     * const customer = await prisma.customer.findUnique({
+     * // Get one Organisasi
+     * const organisasi = await prisma.organisasi.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends customerFindUniqueArgs>(args: SelectSubset<T, customerFindUniqueArgs<ExtArgs>>): Prisma__customerClient<$Result.GetResult<Prisma.$customerPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends organisasiFindUniqueArgs>(args: SelectSubset<T, organisasiFindUniqueArgs<ExtArgs>>): Prisma__organisasiClient<$Result.GetResult<Prisma.$organisasiPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Customer that matches the filter or throw an error with `error.code='P2025'`
+     * Find one Organisasi that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {customerFindUniqueOrThrowArgs} args - Arguments to find a Customer
+     * @param {organisasiFindUniqueOrThrowArgs} args - Arguments to find a Organisasi
      * @example
-     * // Get one Customer
-     * const customer = await prisma.customer.findUniqueOrThrow({
+     * // Get one Organisasi
+     * const organisasi = await prisma.organisasi.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends customerFindUniqueOrThrowArgs>(args: SelectSubset<T, customerFindUniqueOrThrowArgs<ExtArgs>>): Prisma__customerClient<$Result.GetResult<Prisma.$customerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends organisasiFindUniqueOrThrowArgs>(args: SelectSubset<T, organisasiFindUniqueOrThrowArgs<ExtArgs>>): Prisma__organisasiClient<$Result.GetResult<Prisma.$organisasiPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Customer that matches the filter.
+     * Find the first Organisasi that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {customerFindFirstArgs} args - Arguments to find a Customer
+     * @param {organisasiFindFirstArgs} args - Arguments to find a Organisasi
      * @example
-     * // Get one Customer
-     * const customer = await prisma.customer.findFirst({
+     * // Get one Organisasi
+     * const organisasi = await prisma.organisasi.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends customerFindFirstArgs>(args?: SelectSubset<T, customerFindFirstArgs<ExtArgs>>): Prisma__customerClient<$Result.GetResult<Prisma.$customerPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends organisasiFindFirstArgs>(args?: SelectSubset<T, organisasiFindFirstArgs<ExtArgs>>): Prisma__organisasiClient<$Result.GetResult<Prisma.$organisasiPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Customer that matches the filter or
+     * Find the first Organisasi that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {customerFindFirstOrThrowArgs} args - Arguments to find a Customer
+     * @param {organisasiFindFirstOrThrowArgs} args - Arguments to find a Organisasi
      * @example
-     * // Get one Customer
-     * const customer = await prisma.customer.findFirstOrThrow({
+     * // Get one Organisasi
+     * const organisasi = await prisma.organisasi.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends customerFindFirstOrThrowArgs>(args?: SelectSubset<T, customerFindFirstOrThrowArgs<ExtArgs>>): Prisma__customerClient<$Result.GetResult<Prisma.$customerPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends organisasiFindFirstOrThrowArgs>(args?: SelectSubset<T, organisasiFindFirstOrThrowArgs<ExtArgs>>): Prisma__organisasiClient<$Result.GetResult<Prisma.$organisasiPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more Customers that matches the filter.
+     * Find zero or more Organisasis that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {customerFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {organisasiFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Customers
-     * const customers = await prisma.customer.findMany()
+     * // Get all Organisasis
+     * const organisasis = await prisma.organisasi.findMany()
      * 
-     * // Get first 10 Customers
-     * const customers = await prisma.customer.findMany({ take: 10 })
+     * // Get first 10 Organisasis
+     * const organisasis = await prisma.organisasi.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const customerWithIdOnly = await prisma.customer.findMany({ select: { id: true } })
+     * const organisasiWithIdOnly = await prisma.organisasi.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends customerFindManyArgs>(args?: SelectSubset<T, customerFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$customerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends organisasiFindManyArgs>(args?: SelectSubset<T, organisasiFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$organisasiPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Customer.
-     * @param {customerCreateArgs} args - Arguments to create a Customer.
+     * Create a Organisasi.
+     * @param {organisasiCreateArgs} args - Arguments to create a Organisasi.
      * @example
-     * // Create one Customer
-     * const Customer = await prisma.customer.create({
+     * // Create one Organisasi
+     * const Organisasi = await prisma.organisasi.create({
      *   data: {
-     *     // ... data to create a Customer
+     *     // ... data to create a Organisasi
      *   }
      * })
      * 
      */
-    create<T extends customerCreateArgs>(args: SelectSubset<T, customerCreateArgs<ExtArgs>>): Prisma__customerClient<$Result.GetResult<Prisma.$customerPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends organisasiCreateArgs>(args: SelectSubset<T, organisasiCreateArgs<ExtArgs>>): Prisma__organisasiClient<$Result.GetResult<Prisma.$organisasiPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many Customers.
-     * @param {customerCreateManyArgs} args - Arguments to create many Customers.
+     * Create many Organisasis.
+     * @param {organisasiCreateManyArgs} args - Arguments to create many Organisasis.
      * @example
-     * // Create many Customers
-     * const customer = await prisma.customer.createMany({
+     * // Create many Organisasis
+     * const organisasi = await prisma.organisasi.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends customerCreateManyArgs>(args?: SelectSubset<T, customerCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends organisasiCreateManyArgs>(args?: SelectSubset<T, organisasiCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Customers and returns the data saved in the database.
-     * @param {customerCreateManyAndReturnArgs} args - Arguments to create many Customers.
+     * Create many Organisasis and returns the data saved in the database.
+     * @param {organisasiCreateManyAndReturnArgs} args - Arguments to create many Organisasis.
      * @example
-     * // Create many Customers
-     * const customer = await prisma.customer.createManyAndReturn({
+     * // Create many Organisasis
+     * const organisasi = await prisma.organisasi.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Customers and only return the `id`
-     * const customerWithIdOnly = await prisma.customer.createManyAndReturn({
+     * // Create many Organisasis and only return the `id`
+     * const organisasiWithIdOnly = await prisma.organisasi.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -3483,28 +2412,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends customerCreateManyAndReturnArgs>(args?: SelectSubset<T, customerCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$customerPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends organisasiCreateManyAndReturnArgs>(args?: SelectSubset<T, organisasiCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$organisasiPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Customer.
-     * @param {customerDeleteArgs} args - Arguments to delete one Customer.
+     * Delete a Organisasi.
+     * @param {organisasiDeleteArgs} args - Arguments to delete one Organisasi.
      * @example
-     * // Delete one Customer
-     * const Customer = await prisma.customer.delete({
+     * // Delete one Organisasi
+     * const Organisasi = await prisma.organisasi.delete({
      *   where: {
-     *     // ... filter to delete one Customer
+     *     // ... filter to delete one Organisasi
      *   }
      * })
      * 
      */
-    delete<T extends customerDeleteArgs>(args: SelectSubset<T, customerDeleteArgs<ExtArgs>>): Prisma__customerClient<$Result.GetResult<Prisma.$customerPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends organisasiDeleteArgs>(args: SelectSubset<T, organisasiDeleteArgs<ExtArgs>>): Prisma__organisasiClient<$Result.GetResult<Prisma.$organisasiPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Customer.
-     * @param {customerUpdateArgs} args - Arguments to update one Customer.
+     * Update one Organisasi.
+     * @param {organisasiUpdateArgs} args - Arguments to update one Organisasi.
      * @example
-     * // Update one Customer
-     * const customer = await prisma.customer.update({
+     * // Update one Organisasi
+     * const organisasi = await prisma.organisasi.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -3514,30 +2443,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends customerUpdateArgs>(args: SelectSubset<T, customerUpdateArgs<ExtArgs>>): Prisma__customerClient<$Result.GetResult<Prisma.$customerPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends organisasiUpdateArgs>(args: SelectSubset<T, organisasiUpdateArgs<ExtArgs>>): Prisma__organisasiClient<$Result.GetResult<Prisma.$organisasiPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more Customers.
-     * @param {customerDeleteManyArgs} args - Arguments to filter Customers to delete.
+     * Delete zero or more Organisasis.
+     * @param {organisasiDeleteManyArgs} args - Arguments to filter Organisasis to delete.
      * @example
-     * // Delete a few Customers
-     * const { count } = await prisma.customer.deleteMany({
+     * // Delete a few Organisasis
+     * const { count } = await prisma.organisasi.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends customerDeleteManyArgs>(args?: SelectSubset<T, customerDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends organisasiDeleteManyArgs>(args?: SelectSubset<T, organisasiDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Customers.
+     * Update zero or more Organisasis.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {customerUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {organisasiUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Customers
-     * const customer = await prisma.customer.updateMany({
+     * // Update many Organisasis
+     * const organisasi = await prisma.organisasi.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -3547,14 +2476,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends customerUpdateManyArgs>(args: SelectSubset<T, customerUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends organisasiUpdateManyArgs>(args: SelectSubset<T, organisasiUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Customers and returns the data updated in the database.
-     * @param {customerUpdateManyAndReturnArgs} args - Arguments to update many Customers.
+     * Update zero or more Organisasis and returns the data updated in the database.
+     * @param {organisasiUpdateManyAndReturnArgs} args - Arguments to update many Organisasis.
      * @example
-     * // Update many Customers
-     * const customer = await prisma.customer.updateManyAndReturn({
+     * // Update many Organisasis
+     * const organisasi = await prisma.organisasi.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -3563,8 +2492,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Customers and only return the `id`
-     * const customerWithIdOnly = await prisma.customer.updateManyAndReturn({
+     * // Update zero or more Organisasis and only return the `id`
+     * const organisasiWithIdOnly = await prisma.organisasi.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -3577,56 +2506,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends customerUpdateManyAndReturnArgs>(args: SelectSubset<T, customerUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$customerPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends organisasiUpdateManyAndReturnArgs>(args: SelectSubset<T, organisasiUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$organisasiPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Customer.
-     * @param {customerUpsertArgs} args - Arguments to update or create a Customer.
+     * Create or update one Organisasi.
+     * @param {organisasiUpsertArgs} args - Arguments to update or create a Organisasi.
      * @example
-     * // Update or create a Customer
-     * const customer = await prisma.customer.upsert({
+     * // Update or create a Organisasi
+     * const organisasi = await prisma.organisasi.upsert({
      *   create: {
-     *     // ... data to create a Customer
+     *     // ... data to create a Organisasi
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Customer we want to update
+     *     // ... the filter for the Organisasi we want to update
      *   }
      * })
      */
-    upsert<T extends customerUpsertArgs>(args: SelectSubset<T, customerUpsertArgs<ExtArgs>>): Prisma__customerClient<$Result.GetResult<Prisma.$customerPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends organisasiUpsertArgs>(args: SelectSubset<T, organisasiUpsertArgs<ExtArgs>>): Prisma__organisasiClient<$Result.GetResult<Prisma.$organisasiPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of Customers.
+     * Count the number of Organisasis.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {customerCountArgs} args - Arguments to filter Customers to count.
+     * @param {organisasiCountArgs} args - Arguments to filter Organisasis to count.
      * @example
-     * // Count the number of Customers
-     * const count = await prisma.customer.count({
+     * // Count the number of Organisasis
+     * const count = await prisma.organisasi.count({
      *   where: {
-     *     // ... the filter for the Customers we want to count
+     *     // ... the filter for the Organisasis we want to count
      *   }
      * })
     **/
-    count<T extends customerCountArgs>(
-      args?: Subset<T, customerCountArgs>,
+    count<T extends organisasiCountArgs>(
+      args?: Subset<T, organisasiCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], CustomerCountAggregateOutputType>
+          : GetScalarType<T['select'], OrganisasiCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Customer.
+     * Allows you to perform aggregations operations on a Organisasi.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {CustomerAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {OrganisasiAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -3646,13 +2575,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends CustomerAggregateArgs>(args: Subset<T, CustomerAggregateArgs>): Prisma.PrismaPromise<GetCustomerAggregateType<T>>
+    aggregate<T extends OrganisasiAggregateArgs>(args: Subset<T, OrganisasiAggregateArgs>): Prisma.PrismaPromise<GetOrganisasiAggregateType<T>>
 
     /**
-     * Group by Customer.
+     * Group by Organisasi.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {customerGroupByArgs} args - Group by arguments.
+     * @param {organisasiGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -3667,14 +2596,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends customerGroupByArgs,
+      T extends organisasiGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: customerGroupByArgs['orderBy'] }
-        : { orderBy?: customerGroupByArgs['orderBy'] },
+        ? { orderBy: organisasiGroupByArgs['orderBy'] }
+        : { orderBy?: organisasiGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -3723,20 +2652,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, customerGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetCustomerGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, organisasiGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetOrganisasiGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the customer model
+   * Fields of the organisasi model
    */
-  readonly fields: customerFieldRefs;
+  readonly fields: organisasiFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for customer.
+   * The delegate class that acts as a "Promise-like" for organisasi.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__customerClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__organisasiClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -3764,375 +2693,376 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the customer model
+   * Fields of the organisasi model
    */
-  interface customerFieldRefs {
-    readonly id: FieldRef<"customer", 'Int'>
-    readonly nama: FieldRef<"customer", 'String'>
-    readonly phone: FieldRef<"customer", 'String'>
-    readonly email: FieldRef<"customer", 'String'>
-    readonly createdat: FieldRef<"customer", 'DateTime'>
+  interface organisasiFieldRefs {
+    readonly id: FieldRef<"organisasi", 'Int'>
+    readonly nama_organisasi: FieldRef<"organisasi", 'String'>
+    readonly ketua_organisasi: FieldRef<"organisasi", 'String'>
+    readonly no_kontak: FieldRef<"organisasi", 'String'>
+    readonly tahun_dibentuk: FieldRef<"organisasi", 'DateTime'>
+    readonly pembina: FieldRef<"organisasi", 'String'>
   }
     
 
   // Custom InputTypes
   /**
-   * customer findUnique
+   * organisasi findUnique
    */
-  export type customerFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type organisasiFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the customer
+     * Select specific fields to fetch from the organisasi
      */
-    select?: customerSelect<ExtArgs> | null
+    select?: organisasiSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the customer
+     * Omit specific fields from the organisasi
      */
-    omit?: customerOmit<ExtArgs> | null
+    omit?: organisasiOmit<ExtArgs> | null
     /**
-     * Filter, which customer to fetch.
+     * Filter, which organisasi to fetch.
      */
-    where: customerWhereUniqueInput
+    where: organisasiWhereUniqueInput
   }
 
   /**
-   * customer findUniqueOrThrow
+   * organisasi findUniqueOrThrow
    */
-  export type customerFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type organisasiFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the customer
+     * Select specific fields to fetch from the organisasi
      */
-    select?: customerSelect<ExtArgs> | null
+    select?: organisasiSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the customer
+     * Omit specific fields from the organisasi
      */
-    omit?: customerOmit<ExtArgs> | null
+    omit?: organisasiOmit<ExtArgs> | null
     /**
-     * Filter, which customer to fetch.
+     * Filter, which organisasi to fetch.
      */
-    where: customerWhereUniqueInput
+    where: organisasiWhereUniqueInput
   }
 
   /**
-   * customer findFirst
+   * organisasi findFirst
    */
-  export type customerFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type organisasiFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the customer
+     * Select specific fields to fetch from the organisasi
      */
-    select?: customerSelect<ExtArgs> | null
+    select?: organisasiSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the customer
+     * Omit specific fields from the organisasi
      */
-    omit?: customerOmit<ExtArgs> | null
+    omit?: organisasiOmit<ExtArgs> | null
     /**
-     * Filter, which customer to fetch.
+     * Filter, which organisasi to fetch.
      */
-    where?: customerWhereInput
+    where?: organisasiWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of customers to fetch.
+     * Determine the order of organisasis to fetch.
      */
-    orderBy?: customerOrderByWithRelationInput | customerOrderByWithRelationInput[]
+    orderBy?: organisasiOrderByWithRelationInput | organisasiOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for customers.
+     * Sets the position for searching for organisasis.
      */
-    cursor?: customerWhereUniqueInput
+    cursor?: organisasiWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` customers from the position of the cursor.
+     * Take `±n` organisasis from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` customers.
+     * Skip the first `n` organisasis.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of customers.
+     * Filter by unique combinations of organisasis.
      */
-    distinct?: CustomerScalarFieldEnum | CustomerScalarFieldEnum[]
+    distinct?: OrganisasiScalarFieldEnum | OrganisasiScalarFieldEnum[]
   }
 
   /**
-   * customer findFirstOrThrow
+   * organisasi findFirstOrThrow
    */
-  export type customerFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type organisasiFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the customer
+     * Select specific fields to fetch from the organisasi
      */
-    select?: customerSelect<ExtArgs> | null
+    select?: organisasiSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the customer
+     * Omit specific fields from the organisasi
      */
-    omit?: customerOmit<ExtArgs> | null
+    omit?: organisasiOmit<ExtArgs> | null
     /**
-     * Filter, which customer to fetch.
+     * Filter, which organisasi to fetch.
      */
-    where?: customerWhereInput
+    where?: organisasiWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of customers to fetch.
+     * Determine the order of organisasis to fetch.
      */
-    orderBy?: customerOrderByWithRelationInput | customerOrderByWithRelationInput[]
+    orderBy?: organisasiOrderByWithRelationInput | organisasiOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for customers.
+     * Sets the position for searching for organisasis.
      */
-    cursor?: customerWhereUniqueInput
+    cursor?: organisasiWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` customers from the position of the cursor.
+     * Take `±n` organisasis from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` customers.
+     * Skip the first `n` organisasis.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of customers.
+     * Filter by unique combinations of organisasis.
      */
-    distinct?: CustomerScalarFieldEnum | CustomerScalarFieldEnum[]
+    distinct?: OrganisasiScalarFieldEnum | OrganisasiScalarFieldEnum[]
   }
 
   /**
-   * customer findMany
+   * organisasi findMany
    */
-  export type customerFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type organisasiFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the customer
+     * Select specific fields to fetch from the organisasi
      */
-    select?: customerSelect<ExtArgs> | null
+    select?: organisasiSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the customer
+     * Omit specific fields from the organisasi
      */
-    omit?: customerOmit<ExtArgs> | null
+    omit?: organisasiOmit<ExtArgs> | null
     /**
-     * Filter, which customers to fetch.
+     * Filter, which organisasis to fetch.
      */
-    where?: customerWhereInput
+    where?: organisasiWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of customers to fetch.
+     * Determine the order of organisasis to fetch.
      */
-    orderBy?: customerOrderByWithRelationInput | customerOrderByWithRelationInput[]
+    orderBy?: organisasiOrderByWithRelationInput | organisasiOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing customers.
+     * Sets the position for listing organisasis.
      */
-    cursor?: customerWhereUniqueInput
+    cursor?: organisasiWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` customers from the position of the cursor.
+     * Take `±n` organisasis from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` customers.
+     * Skip the first `n` organisasis.
      */
     skip?: number
-    distinct?: CustomerScalarFieldEnum | CustomerScalarFieldEnum[]
+    distinct?: OrganisasiScalarFieldEnum | OrganisasiScalarFieldEnum[]
   }
 
   /**
-   * customer create
+   * organisasi create
    */
-  export type customerCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type organisasiCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the customer
+     * Select specific fields to fetch from the organisasi
      */
-    select?: customerSelect<ExtArgs> | null
+    select?: organisasiSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the customer
+     * Omit specific fields from the organisasi
      */
-    omit?: customerOmit<ExtArgs> | null
+    omit?: organisasiOmit<ExtArgs> | null
     /**
-     * The data needed to create a customer.
+     * The data needed to create a organisasi.
      */
-    data: XOR<customerCreateInput, customerUncheckedCreateInput>
+    data: XOR<organisasiCreateInput, organisasiUncheckedCreateInput>
   }
 
   /**
-   * customer createMany
+   * organisasi createMany
    */
-  export type customerCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type organisasiCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many customers.
+     * The data used to create many organisasis.
      */
-    data: customerCreateManyInput | customerCreateManyInput[]
+    data: organisasiCreateManyInput | organisasiCreateManyInput[]
   }
 
   /**
-   * customer createManyAndReturn
+   * organisasi createManyAndReturn
    */
-  export type customerCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type organisasiCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the customer
+     * Select specific fields to fetch from the organisasi
      */
-    select?: customerSelectCreateManyAndReturn<ExtArgs> | null
+    select?: organisasiSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the customer
+     * Omit specific fields from the organisasi
      */
-    omit?: customerOmit<ExtArgs> | null
+    omit?: organisasiOmit<ExtArgs> | null
     /**
-     * The data used to create many customers.
+     * The data used to create many organisasis.
      */
-    data: customerCreateManyInput | customerCreateManyInput[]
+    data: organisasiCreateManyInput | organisasiCreateManyInput[]
   }
 
   /**
-   * customer update
+   * organisasi update
    */
-  export type customerUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type organisasiUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the customer
+     * Select specific fields to fetch from the organisasi
      */
-    select?: customerSelect<ExtArgs> | null
+    select?: organisasiSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the customer
+     * Omit specific fields from the organisasi
      */
-    omit?: customerOmit<ExtArgs> | null
+    omit?: organisasiOmit<ExtArgs> | null
     /**
-     * The data needed to update a customer.
+     * The data needed to update a organisasi.
      */
-    data: XOR<customerUpdateInput, customerUncheckedUpdateInput>
+    data: XOR<organisasiUpdateInput, organisasiUncheckedUpdateInput>
     /**
-     * Choose, which customer to update.
+     * Choose, which organisasi to update.
      */
-    where: customerWhereUniqueInput
+    where: organisasiWhereUniqueInput
   }
 
   /**
-   * customer updateMany
+   * organisasi updateMany
    */
-  export type customerUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type organisasiUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update customers.
+     * The data used to update organisasis.
      */
-    data: XOR<customerUpdateManyMutationInput, customerUncheckedUpdateManyInput>
+    data: XOR<organisasiUpdateManyMutationInput, organisasiUncheckedUpdateManyInput>
     /**
-     * Filter which customers to update
+     * Filter which organisasis to update
      */
-    where?: customerWhereInput
+    where?: organisasiWhereInput
     /**
-     * Limit how many customers to update.
+     * Limit how many organisasis to update.
      */
     limit?: number
   }
 
   /**
-   * customer updateManyAndReturn
+   * organisasi updateManyAndReturn
    */
-  export type customerUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type organisasiUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the customer
+     * Select specific fields to fetch from the organisasi
      */
-    select?: customerSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: organisasiSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the customer
+     * Omit specific fields from the organisasi
      */
-    omit?: customerOmit<ExtArgs> | null
+    omit?: organisasiOmit<ExtArgs> | null
     /**
-     * The data used to update customers.
+     * The data used to update organisasis.
      */
-    data: XOR<customerUpdateManyMutationInput, customerUncheckedUpdateManyInput>
+    data: XOR<organisasiUpdateManyMutationInput, organisasiUncheckedUpdateManyInput>
     /**
-     * Filter which customers to update
+     * Filter which organisasis to update
      */
-    where?: customerWhereInput
+    where?: organisasiWhereInput
     /**
-     * Limit how many customers to update.
+     * Limit how many organisasis to update.
      */
     limit?: number
   }
 
   /**
-   * customer upsert
+   * organisasi upsert
    */
-  export type customerUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type organisasiUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the customer
+     * Select specific fields to fetch from the organisasi
      */
-    select?: customerSelect<ExtArgs> | null
+    select?: organisasiSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the customer
+     * Omit specific fields from the organisasi
      */
-    omit?: customerOmit<ExtArgs> | null
+    omit?: organisasiOmit<ExtArgs> | null
     /**
-     * The filter to search for the customer to update in case it exists.
+     * The filter to search for the organisasi to update in case it exists.
      */
-    where: customerWhereUniqueInput
+    where: organisasiWhereUniqueInput
     /**
-     * In case the customer found by the `where` argument doesn't exist, create a new customer with this data.
+     * In case the organisasi found by the `where` argument doesn't exist, create a new organisasi with this data.
      */
-    create: XOR<customerCreateInput, customerUncheckedCreateInput>
+    create: XOR<organisasiCreateInput, organisasiUncheckedCreateInput>
     /**
-     * In case the customer was found with the provided `where` argument, update it with this data.
+     * In case the organisasi was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<customerUpdateInput, customerUncheckedUpdateInput>
+    update: XOR<organisasiUpdateInput, organisasiUncheckedUpdateInput>
   }
 
   /**
-   * customer delete
+   * organisasi delete
    */
-  export type customerDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type organisasiDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the customer
+     * Select specific fields to fetch from the organisasi
      */
-    select?: customerSelect<ExtArgs> | null
+    select?: organisasiSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the customer
+     * Omit specific fields from the organisasi
      */
-    omit?: customerOmit<ExtArgs> | null
+    omit?: organisasiOmit<ExtArgs> | null
     /**
-     * Filter which customer to delete.
+     * Filter which organisasi to delete.
      */
-    where: customerWhereUniqueInput
+    where: organisasiWhereUniqueInput
   }
 
   /**
-   * customer deleteMany
+   * organisasi deleteMany
    */
-  export type customerDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type organisasiDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which customers to delete
+     * Filter which organisasis to delete
      */
-    where?: customerWhereInput
+    where?: organisasiWhereInput
     /**
-     * Limit how many customers to delete.
+     * Limit how many organisasis to delete.
      */
     limit?: number
   }
 
   /**
-   * customer without action
+   * organisasi without action
    */
-  export type customerDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type organisasiDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the customer
+     * Select specific fields to fetch from the organisasi
      */
-    select?: customerSelect<ExtArgs> | null
+    select?: organisasiSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the customer
+     * Omit specific fields from the organisasi
      */
-    omit?: customerOmit<ExtArgs> | null
+    omit?: organisasiOmit<ExtArgs> | null
   }
 
 
@@ -4147,37 +3077,30 @@ export namespace Prisma {
   export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-  export const PreorderScalarFieldEnum: {
+  export const KegiatanScalarFieldEnum: {
     id: 'id',
-    order_date: 'order_date',
-    order_by: 'order_by',
-    selected_package: 'selected_package',
-    qty: 'qty',
-    status: 'status'
+    judul_kegiatan: 'judul_kegiatan',
+    id_organisasi: 'id_organisasi',
+    tanggal_kegiatan: 'tanggal_kegiatan',
+    lokasi: 'lokasi',
+    jenis_kegiatan: 'jenis_kegiatan',
+    deskripsi: 'deskripsi',
+    tautan: 'tautan'
   };
 
-  export type PreorderScalarFieldEnum = (typeof PreorderScalarFieldEnum)[keyof typeof PreorderScalarFieldEnum]
+  export type KegiatanScalarFieldEnum = (typeof KegiatanScalarFieldEnum)[keyof typeof KegiatanScalarFieldEnum]
 
 
-  export const PaketScalarFieldEnum: {
+  export const OrganisasiScalarFieldEnum: {
     id: 'id',
-    kode: 'kode',
-    nama: 'nama',
-    deskripsi: 'deskripsi'
+    nama_organisasi: 'nama_organisasi',
+    ketua_organisasi: 'ketua_organisasi',
+    no_kontak: 'no_kontak',
+    tahun_dibentuk: 'tahun_dibentuk',
+    pembina: 'pembina'
   };
 
-  export type PaketScalarFieldEnum = (typeof PaketScalarFieldEnum)[keyof typeof PaketScalarFieldEnum]
-
-
-  export const CustomerScalarFieldEnum: {
-    id: 'id',
-    nama: 'nama',
-    phone: 'phone',
-    email: 'email',
-    createdat: 'createdat'
-  };
-
-  export type CustomerScalarFieldEnum = (typeof CustomerScalarFieldEnum)[keyof typeof CustomerScalarFieldEnum]
+  export type OrganisasiScalarFieldEnum = (typeof OrganisasiScalarFieldEnum)[keyof typeof OrganisasiScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -4201,13 +3124,6 @@ export namespace Prisma {
 
 
   /**
-   * Reference to a field of type 'DateTime'
-   */
-  export type DateTimeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'DateTime'>
-    
-
-
-  /**
    * Reference to a field of type 'String'
    */
   export type StringFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'String'>
@@ -4215,9 +3131,9 @@ export namespace Prisma {
 
 
   /**
-   * Reference to a field of type 'Boolean'
+   * Reference to a field of type 'DateTime'
    */
-  export type BooleanFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Boolean'>
+  export type DateTimeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'DateTime'>
     
 
 
@@ -4231,325 +3147,266 @@ export namespace Prisma {
    */
 
 
-  export type preorderWhereInput = {
-    AND?: preorderWhereInput | preorderWhereInput[]
-    OR?: preorderWhereInput[]
-    NOT?: preorderWhereInput | preorderWhereInput[]
-    id?: IntFilter<"preorder"> | number
-    order_date?: DateTimeFilter<"preorder"> | Date | string
-    order_by?: StringFilter<"preorder"> | string
-    selected_package?: StringFilter<"preorder"> | string
-    qty?: IntFilter<"preorder"> | number
-    status?: BoolFilter<"preorder"> | boolean
+  export type kegiatanWhereInput = {
+    AND?: kegiatanWhereInput | kegiatanWhereInput[]
+    OR?: kegiatanWhereInput[]
+    NOT?: kegiatanWhereInput | kegiatanWhereInput[]
+    id?: IntFilter<"kegiatan"> | number
+    judul_kegiatan?: StringFilter<"kegiatan"> | string
+    id_organisasi?: StringFilter<"kegiatan"> | string
+    tanggal_kegiatan?: DateTimeFilter<"kegiatan"> | Date | string
+    lokasi?: StringFilter<"kegiatan"> | string
+    jenis_kegiatan?: StringFilter<"kegiatan"> | string
+    deskripsi?: StringFilter<"kegiatan"> | string
+    tautan?: StringFilter<"kegiatan"> | string
   }
 
-  export type preorderOrderByWithRelationInput = {
+  export type kegiatanOrderByWithRelationInput = {
     id?: SortOrder
-    order_date?: SortOrder
-    order_by?: SortOrder
-    selected_package?: SortOrder
-    qty?: SortOrder
-    status?: SortOrder
+    judul_kegiatan?: SortOrder
+    id_organisasi?: SortOrder
+    tanggal_kegiatan?: SortOrder
+    lokasi?: SortOrder
+    jenis_kegiatan?: SortOrder
+    deskripsi?: SortOrder
+    tautan?: SortOrder
   }
 
-  export type preorderWhereUniqueInput = Prisma.AtLeast<{
+  export type kegiatanWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: preorderWhereInput | preorderWhereInput[]
-    OR?: preorderWhereInput[]
-    NOT?: preorderWhereInput | preorderWhereInput[]
-    order_date?: DateTimeFilter<"preorder"> | Date | string
-    order_by?: StringFilter<"preorder"> | string
-    selected_package?: StringFilter<"preorder"> | string
-    qty?: IntFilter<"preorder"> | number
-    status?: BoolFilter<"preorder"> | boolean
+    AND?: kegiatanWhereInput | kegiatanWhereInput[]
+    OR?: kegiatanWhereInput[]
+    NOT?: kegiatanWhereInput | kegiatanWhereInput[]
+    judul_kegiatan?: StringFilter<"kegiatan"> | string
+    id_organisasi?: StringFilter<"kegiatan"> | string
+    tanggal_kegiatan?: DateTimeFilter<"kegiatan"> | Date | string
+    lokasi?: StringFilter<"kegiatan"> | string
+    jenis_kegiatan?: StringFilter<"kegiatan"> | string
+    deskripsi?: StringFilter<"kegiatan"> | string
+    tautan?: StringFilter<"kegiatan"> | string
   }, "id">
 
-  export type preorderOrderByWithAggregationInput = {
+  export type kegiatanOrderByWithAggregationInput = {
     id?: SortOrder
-    order_date?: SortOrder
-    order_by?: SortOrder
-    selected_package?: SortOrder
-    qty?: SortOrder
-    status?: SortOrder
-    _count?: preorderCountOrderByAggregateInput
-    _avg?: preorderAvgOrderByAggregateInput
-    _max?: preorderMaxOrderByAggregateInput
-    _min?: preorderMinOrderByAggregateInput
-    _sum?: preorderSumOrderByAggregateInput
-  }
-
-  export type preorderScalarWhereWithAggregatesInput = {
-    AND?: preorderScalarWhereWithAggregatesInput | preorderScalarWhereWithAggregatesInput[]
-    OR?: preorderScalarWhereWithAggregatesInput[]
-    NOT?: preorderScalarWhereWithAggregatesInput | preorderScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"preorder"> | number
-    order_date?: DateTimeWithAggregatesFilter<"preorder"> | Date | string
-    order_by?: StringWithAggregatesFilter<"preorder"> | string
-    selected_package?: StringWithAggregatesFilter<"preorder"> | string
-    qty?: IntWithAggregatesFilter<"preorder"> | number
-    status?: BoolWithAggregatesFilter<"preorder"> | boolean
-  }
-
-  export type paketWhereInput = {
-    AND?: paketWhereInput | paketWhereInput[]
-    OR?: paketWhereInput[]
-    NOT?: paketWhereInput | paketWhereInput[]
-    id?: IntFilter<"paket"> | number
-    kode?: StringFilter<"paket"> | string
-    nama?: StringFilter<"paket"> | string
-    deskripsi?: StringFilter<"paket"> | string
-  }
-
-  export type paketOrderByWithRelationInput = {
-    id?: SortOrder
-    kode?: SortOrder
-    nama?: SortOrder
+    judul_kegiatan?: SortOrder
+    id_organisasi?: SortOrder
+    tanggal_kegiatan?: SortOrder
+    lokasi?: SortOrder
+    jenis_kegiatan?: SortOrder
     deskripsi?: SortOrder
+    tautan?: SortOrder
+    _count?: kegiatanCountOrderByAggregateInput
+    _avg?: kegiatanAvgOrderByAggregateInput
+    _max?: kegiatanMaxOrderByAggregateInput
+    _min?: kegiatanMinOrderByAggregateInput
+    _sum?: kegiatanSumOrderByAggregateInput
   }
 
-  export type paketWhereUniqueInput = Prisma.AtLeast<{
-    id?: number
-    kode?: string
-    AND?: paketWhereInput | paketWhereInput[]
-    OR?: paketWhereInput[]
-    NOT?: paketWhereInput | paketWhereInput[]
-    nama?: StringFilter<"paket"> | string
-    deskripsi?: StringFilter<"paket"> | string
-  }, "id" | "kode">
+  export type kegiatanScalarWhereWithAggregatesInput = {
+    AND?: kegiatanScalarWhereWithAggregatesInput | kegiatanScalarWhereWithAggregatesInput[]
+    OR?: kegiatanScalarWhereWithAggregatesInput[]
+    NOT?: kegiatanScalarWhereWithAggregatesInput | kegiatanScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"kegiatan"> | number
+    judul_kegiatan?: StringWithAggregatesFilter<"kegiatan"> | string
+    id_organisasi?: StringWithAggregatesFilter<"kegiatan"> | string
+    tanggal_kegiatan?: DateTimeWithAggregatesFilter<"kegiatan"> | Date | string
+    lokasi?: StringWithAggregatesFilter<"kegiatan"> | string
+    jenis_kegiatan?: StringWithAggregatesFilter<"kegiatan"> | string
+    deskripsi?: StringWithAggregatesFilter<"kegiatan"> | string
+    tautan?: StringWithAggregatesFilter<"kegiatan"> | string
+  }
 
-  export type paketOrderByWithAggregationInput = {
+  export type organisasiWhereInput = {
+    AND?: organisasiWhereInput | organisasiWhereInput[]
+    OR?: organisasiWhereInput[]
+    NOT?: organisasiWhereInput | organisasiWhereInput[]
+    id?: IntFilter<"organisasi"> | number
+    nama_organisasi?: StringFilter<"organisasi"> | string
+    ketua_organisasi?: StringFilter<"organisasi"> | string
+    no_kontak?: StringFilter<"organisasi"> | string
+    tahun_dibentuk?: DateTimeFilter<"organisasi"> | Date | string
+    pembina?: StringFilter<"organisasi"> | string
+  }
+
+  export type organisasiOrderByWithRelationInput = {
     id?: SortOrder
-    kode?: SortOrder
-    nama?: SortOrder
-    deskripsi?: SortOrder
-    _count?: paketCountOrderByAggregateInput
-    _avg?: paketAvgOrderByAggregateInput
-    _max?: paketMaxOrderByAggregateInput
-    _min?: paketMinOrderByAggregateInput
-    _sum?: paketSumOrderByAggregateInput
+    nama_organisasi?: SortOrder
+    ketua_organisasi?: SortOrder
+    no_kontak?: SortOrder
+    tahun_dibentuk?: SortOrder
+    pembina?: SortOrder
   }
 
-  export type paketScalarWhereWithAggregatesInput = {
-    AND?: paketScalarWhereWithAggregatesInput | paketScalarWhereWithAggregatesInput[]
-    OR?: paketScalarWhereWithAggregatesInput[]
-    NOT?: paketScalarWhereWithAggregatesInput | paketScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"paket"> | number
-    kode?: StringWithAggregatesFilter<"paket"> | string
-    nama?: StringWithAggregatesFilter<"paket"> | string
-    deskripsi?: StringWithAggregatesFilter<"paket"> | string
-  }
-
-  export type customerWhereInput = {
-    AND?: customerWhereInput | customerWhereInput[]
-    OR?: customerWhereInput[]
-    NOT?: customerWhereInput | customerWhereInput[]
-    id?: IntFilter<"customer"> | number
-    nama?: StringFilter<"customer"> | string
-    phone?: StringFilter<"customer"> | string
-    email?: StringFilter<"customer"> | string
-    createdat?: DateTimeFilter<"customer"> | Date | string
-  }
-
-  export type customerOrderByWithRelationInput = {
-    id?: SortOrder
-    nama?: SortOrder
-    phone?: SortOrder
-    email?: SortOrder
-    createdat?: SortOrder
-  }
-
-  export type customerWhereUniqueInput = Prisma.AtLeast<{
+  export type organisasiWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: customerWhereInput | customerWhereInput[]
-    OR?: customerWhereInput[]
-    NOT?: customerWhereInput | customerWhereInput[]
-    nama?: StringFilter<"customer"> | string
-    phone?: StringFilter<"customer"> | string
-    email?: StringFilter<"customer"> | string
-    createdat?: DateTimeFilter<"customer"> | Date | string
+    AND?: organisasiWhereInput | organisasiWhereInput[]
+    OR?: organisasiWhereInput[]
+    NOT?: organisasiWhereInput | organisasiWhereInput[]
+    nama_organisasi?: StringFilter<"organisasi"> | string
+    ketua_organisasi?: StringFilter<"organisasi"> | string
+    no_kontak?: StringFilter<"organisasi"> | string
+    tahun_dibentuk?: DateTimeFilter<"organisasi"> | Date | string
+    pembina?: StringFilter<"organisasi"> | string
   }, "id">
 
-  export type customerOrderByWithAggregationInput = {
+  export type organisasiOrderByWithAggregationInput = {
     id?: SortOrder
-    nama?: SortOrder
-    phone?: SortOrder
-    email?: SortOrder
-    createdat?: SortOrder
-    _count?: customerCountOrderByAggregateInput
-    _avg?: customerAvgOrderByAggregateInput
-    _max?: customerMaxOrderByAggregateInput
-    _min?: customerMinOrderByAggregateInput
-    _sum?: customerSumOrderByAggregateInput
+    nama_organisasi?: SortOrder
+    ketua_organisasi?: SortOrder
+    no_kontak?: SortOrder
+    tahun_dibentuk?: SortOrder
+    pembina?: SortOrder
+    _count?: organisasiCountOrderByAggregateInput
+    _avg?: organisasiAvgOrderByAggregateInput
+    _max?: organisasiMaxOrderByAggregateInput
+    _min?: organisasiMinOrderByAggregateInput
+    _sum?: organisasiSumOrderByAggregateInput
   }
 
-  export type customerScalarWhereWithAggregatesInput = {
-    AND?: customerScalarWhereWithAggregatesInput | customerScalarWhereWithAggregatesInput[]
-    OR?: customerScalarWhereWithAggregatesInput[]
-    NOT?: customerScalarWhereWithAggregatesInput | customerScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"customer"> | number
-    nama?: StringWithAggregatesFilter<"customer"> | string
-    phone?: StringWithAggregatesFilter<"customer"> | string
-    email?: StringWithAggregatesFilter<"customer"> | string
-    createdat?: DateTimeWithAggregatesFilter<"customer"> | Date | string
+  export type organisasiScalarWhereWithAggregatesInput = {
+    AND?: organisasiScalarWhereWithAggregatesInput | organisasiScalarWhereWithAggregatesInput[]
+    OR?: organisasiScalarWhereWithAggregatesInput[]
+    NOT?: organisasiScalarWhereWithAggregatesInput | organisasiScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"organisasi"> | number
+    nama_organisasi?: StringWithAggregatesFilter<"organisasi"> | string
+    ketua_organisasi?: StringWithAggregatesFilter<"organisasi"> | string
+    no_kontak?: StringWithAggregatesFilter<"organisasi"> | string
+    tahun_dibentuk?: DateTimeWithAggregatesFilter<"organisasi"> | Date | string
+    pembina?: StringWithAggregatesFilter<"organisasi"> | string
   }
 
-  export type preorderCreateInput = {
-    order_date: Date | string
-    order_by: string
-    selected_package: string
-    qty: number
-    status: boolean
-  }
-
-  export type preorderUncheckedCreateInput = {
-    id?: number
-    order_date: Date | string
-    order_by: string
-    selected_package: string
-    qty: number
-    status: boolean
-  }
-
-  export type preorderUpdateInput = {
-    order_date?: DateTimeFieldUpdateOperationsInput | Date | string
-    order_by?: StringFieldUpdateOperationsInput | string
-    selected_package?: StringFieldUpdateOperationsInput | string
-    qty?: IntFieldUpdateOperationsInput | number
-    status?: BoolFieldUpdateOperationsInput | boolean
-  }
-
-  export type preorderUncheckedUpdateInput = {
-    id?: IntFieldUpdateOperationsInput | number
-    order_date?: DateTimeFieldUpdateOperationsInput | Date | string
-    order_by?: StringFieldUpdateOperationsInput | string
-    selected_package?: StringFieldUpdateOperationsInput | string
-    qty?: IntFieldUpdateOperationsInput | number
-    status?: BoolFieldUpdateOperationsInput | boolean
-  }
-
-  export type preorderCreateManyInput = {
-    id?: number
-    order_date: Date | string
-    order_by: string
-    selected_package: string
-    qty: number
-    status: boolean
-  }
-
-  export type preorderUpdateManyMutationInput = {
-    order_date?: DateTimeFieldUpdateOperationsInput | Date | string
-    order_by?: StringFieldUpdateOperationsInput | string
-    selected_package?: StringFieldUpdateOperationsInput | string
-    qty?: IntFieldUpdateOperationsInput | number
-    status?: BoolFieldUpdateOperationsInput | boolean
-  }
-
-  export type preorderUncheckedUpdateManyInput = {
-    id?: IntFieldUpdateOperationsInput | number
-    order_date?: DateTimeFieldUpdateOperationsInput | Date | string
-    order_by?: StringFieldUpdateOperationsInput | string
-    selected_package?: StringFieldUpdateOperationsInput | string
-    qty?: IntFieldUpdateOperationsInput | number
-    status?: BoolFieldUpdateOperationsInput | boolean
-  }
-
-  export type paketCreateInput = {
-    kode: string
-    nama: string
+  export type kegiatanCreateInput = {
+    judul_kegiatan: string
+    id_organisasi: string
+    tanggal_kegiatan: Date | string
+    lokasi: string
+    jenis_kegiatan: string
     deskripsi: string
+    tautan: string
   }
 
-  export type paketUncheckedCreateInput = {
+  export type kegiatanUncheckedCreateInput = {
     id?: number
-    kode: string
-    nama: string
+    judul_kegiatan: string
+    id_organisasi: string
+    tanggal_kegiatan: Date | string
+    lokasi: string
+    jenis_kegiatan: string
     deskripsi: string
+    tautan: string
   }
 
-  export type paketUpdateInput = {
-    kode?: StringFieldUpdateOperationsInput | string
-    nama?: StringFieldUpdateOperationsInput | string
+  export type kegiatanUpdateInput = {
+    judul_kegiatan?: StringFieldUpdateOperationsInput | string
+    id_organisasi?: StringFieldUpdateOperationsInput | string
+    tanggal_kegiatan?: DateTimeFieldUpdateOperationsInput | Date | string
+    lokasi?: StringFieldUpdateOperationsInput | string
+    jenis_kegiatan?: StringFieldUpdateOperationsInput | string
     deskripsi?: StringFieldUpdateOperationsInput | string
+    tautan?: StringFieldUpdateOperationsInput | string
   }
 
-  export type paketUncheckedUpdateInput = {
+  export type kegiatanUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
-    kode?: StringFieldUpdateOperationsInput | string
-    nama?: StringFieldUpdateOperationsInput | string
+    judul_kegiatan?: StringFieldUpdateOperationsInput | string
+    id_organisasi?: StringFieldUpdateOperationsInput | string
+    tanggal_kegiatan?: DateTimeFieldUpdateOperationsInput | Date | string
+    lokasi?: StringFieldUpdateOperationsInput | string
+    jenis_kegiatan?: StringFieldUpdateOperationsInput | string
     deskripsi?: StringFieldUpdateOperationsInput | string
+    tautan?: StringFieldUpdateOperationsInput | string
   }
 
-  export type paketCreateManyInput = {
+  export type kegiatanCreateManyInput = {
     id?: number
-    kode: string
-    nama: string
+    judul_kegiatan: string
+    id_organisasi: string
+    tanggal_kegiatan: Date | string
+    lokasi: string
+    jenis_kegiatan: string
     deskripsi: string
+    tautan: string
   }
 
-  export type paketUpdateManyMutationInput = {
-    kode?: StringFieldUpdateOperationsInput | string
-    nama?: StringFieldUpdateOperationsInput | string
+  export type kegiatanUpdateManyMutationInput = {
+    judul_kegiatan?: StringFieldUpdateOperationsInput | string
+    id_organisasi?: StringFieldUpdateOperationsInput | string
+    tanggal_kegiatan?: DateTimeFieldUpdateOperationsInput | Date | string
+    lokasi?: StringFieldUpdateOperationsInput | string
+    jenis_kegiatan?: StringFieldUpdateOperationsInput | string
     deskripsi?: StringFieldUpdateOperationsInput | string
+    tautan?: StringFieldUpdateOperationsInput | string
   }
 
-  export type paketUncheckedUpdateManyInput = {
+  export type kegiatanUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
-    kode?: StringFieldUpdateOperationsInput | string
-    nama?: StringFieldUpdateOperationsInput | string
+    judul_kegiatan?: StringFieldUpdateOperationsInput | string
+    id_organisasi?: StringFieldUpdateOperationsInput | string
+    tanggal_kegiatan?: DateTimeFieldUpdateOperationsInput | Date | string
+    lokasi?: StringFieldUpdateOperationsInput | string
+    jenis_kegiatan?: StringFieldUpdateOperationsInput | string
     deskripsi?: StringFieldUpdateOperationsInput | string
+    tautan?: StringFieldUpdateOperationsInput | string
   }
 
-  export type customerCreateInput = {
-    nama: string
-    phone: string
-    email: string
-    createdat?: Date | string
+  export type organisasiCreateInput = {
+    nama_organisasi: string
+    ketua_organisasi: string
+    no_kontak: string
+    tahun_dibentuk: Date | string
+    pembina: string
   }
 
-  export type customerUncheckedCreateInput = {
+  export type organisasiUncheckedCreateInput = {
     id?: number
-    nama: string
-    phone: string
-    email: string
-    createdat?: Date | string
+    nama_organisasi: string
+    ketua_organisasi: string
+    no_kontak: string
+    tahun_dibentuk: Date | string
+    pembina: string
   }
 
-  export type customerUpdateInput = {
-    nama?: StringFieldUpdateOperationsInput | string
-    phone?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    createdat?: DateTimeFieldUpdateOperationsInput | Date | string
+  export type organisasiUpdateInput = {
+    nama_organisasi?: StringFieldUpdateOperationsInput | string
+    ketua_organisasi?: StringFieldUpdateOperationsInput | string
+    no_kontak?: StringFieldUpdateOperationsInput | string
+    tahun_dibentuk?: DateTimeFieldUpdateOperationsInput | Date | string
+    pembina?: StringFieldUpdateOperationsInput | string
   }
 
-  export type customerUncheckedUpdateInput = {
+  export type organisasiUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
-    nama?: StringFieldUpdateOperationsInput | string
-    phone?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    createdat?: DateTimeFieldUpdateOperationsInput | Date | string
+    nama_organisasi?: StringFieldUpdateOperationsInput | string
+    ketua_organisasi?: StringFieldUpdateOperationsInput | string
+    no_kontak?: StringFieldUpdateOperationsInput | string
+    tahun_dibentuk?: DateTimeFieldUpdateOperationsInput | Date | string
+    pembina?: StringFieldUpdateOperationsInput | string
   }
 
-  export type customerCreateManyInput = {
+  export type organisasiCreateManyInput = {
     id?: number
-    nama: string
-    phone: string
-    email: string
-    createdat?: Date | string
+    nama_organisasi: string
+    ketua_organisasi: string
+    no_kontak: string
+    tahun_dibentuk: Date | string
+    pembina: string
   }
 
-  export type customerUpdateManyMutationInput = {
-    nama?: StringFieldUpdateOperationsInput | string
-    phone?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    createdat?: DateTimeFieldUpdateOperationsInput | Date | string
+  export type organisasiUpdateManyMutationInput = {
+    nama_organisasi?: StringFieldUpdateOperationsInput | string
+    ketua_organisasi?: StringFieldUpdateOperationsInput | string
+    no_kontak?: StringFieldUpdateOperationsInput | string
+    tahun_dibentuk?: DateTimeFieldUpdateOperationsInput | Date | string
+    pembina?: StringFieldUpdateOperationsInput | string
   }
 
-  export type customerUncheckedUpdateManyInput = {
+  export type organisasiUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
-    nama?: StringFieldUpdateOperationsInput | string
-    phone?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    createdat?: DateTimeFieldUpdateOperationsInput | Date | string
+    nama_organisasi?: StringFieldUpdateOperationsInput | string
+    ketua_organisasi?: StringFieldUpdateOperationsInput | string
+    no_kontak?: StringFieldUpdateOperationsInput | string
+    tahun_dibentuk?: DateTimeFieldUpdateOperationsInput | Date | string
+    pembina?: StringFieldUpdateOperationsInput | string
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -4561,17 +3418,6 @@ export namespace Prisma {
     gt?: number | IntFieldRefInput<$PrismaModel>
     gte?: number | IntFieldRefInput<$PrismaModel>
     not?: NestedIntFilter<$PrismaModel> | number
-  }
-
-  export type DateTimeFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    in?: Date[] | string[]
-    notIn?: Date[] | string[]
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
   export type StringFilter<$PrismaModel = never> = {
@@ -4588,46 +3434,56 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
-  export type BoolFilter<$PrismaModel = never> = {
-    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
-    not?: NestedBoolFilter<$PrismaModel> | boolean
+  export type DateTimeFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[]
+    notIn?: Date[] | string[]
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
-  export type preorderCountOrderByAggregateInput = {
+  export type kegiatanCountOrderByAggregateInput = {
     id?: SortOrder
-    order_date?: SortOrder
-    order_by?: SortOrder
-    selected_package?: SortOrder
-    qty?: SortOrder
-    status?: SortOrder
+    judul_kegiatan?: SortOrder
+    id_organisasi?: SortOrder
+    tanggal_kegiatan?: SortOrder
+    lokasi?: SortOrder
+    jenis_kegiatan?: SortOrder
+    deskripsi?: SortOrder
+    tautan?: SortOrder
   }
 
-  export type preorderAvgOrderByAggregateInput = {
+  export type kegiatanAvgOrderByAggregateInput = {
     id?: SortOrder
-    qty?: SortOrder
   }
 
-  export type preorderMaxOrderByAggregateInput = {
+  export type kegiatanMaxOrderByAggregateInput = {
     id?: SortOrder
-    order_date?: SortOrder
-    order_by?: SortOrder
-    selected_package?: SortOrder
-    qty?: SortOrder
-    status?: SortOrder
+    judul_kegiatan?: SortOrder
+    id_organisasi?: SortOrder
+    tanggal_kegiatan?: SortOrder
+    lokasi?: SortOrder
+    jenis_kegiatan?: SortOrder
+    deskripsi?: SortOrder
+    tautan?: SortOrder
   }
 
-  export type preorderMinOrderByAggregateInput = {
+  export type kegiatanMinOrderByAggregateInput = {
     id?: SortOrder
-    order_date?: SortOrder
-    order_by?: SortOrder
-    selected_package?: SortOrder
-    qty?: SortOrder
-    status?: SortOrder
+    judul_kegiatan?: SortOrder
+    id_organisasi?: SortOrder
+    tanggal_kegiatan?: SortOrder
+    lokasi?: SortOrder
+    jenis_kegiatan?: SortOrder
+    deskripsi?: SortOrder
+    tautan?: SortOrder
   }
 
-  export type preorderSumOrderByAggregateInput = {
+  export type kegiatanSumOrderByAggregateInput = {
     id?: SortOrder
-    qty?: SortOrder
   }
 
   export type IntWithAggregatesFilter<$PrismaModel = never> = {
@@ -4644,20 +3500,6 @@ export namespace Prisma {
     _sum?: NestedIntFilter<$PrismaModel>
     _min?: NestedIntFilter<$PrismaModel>
     _max?: NestedIntFilter<$PrismaModel>
-  }
-
-  export type DateTimeWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    in?: Date[] | string[]
-    notIn?: Date[] | string[]
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeWithAggregatesFilter<$PrismaModel> | Date | string
-    _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedDateTimeFilter<$PrismaModel>
-    _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
   export type StringWithAggregatesFilter<$PrismaModel = never> = {
@@ -4677,81 +3519,61 @@ export namespace Prisma {
     _max?: NestedStringFilter<$PrismaModel>
   }
 
-  export type BoolWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
-    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
+  export type DateTimeWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[]
+    notIn?: Date[] | string[]
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeWithAggregatesFilter<$PrismaModel> | Date | string
     _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedBoolFilter<$PrismaModel>
-    _max?: NestedBoolFilter<$PrismaModel>
+    _min?: NestedDateTimeFilter<$PrismaModel>
+    _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
-  export type paketCountOrderByAggregateInput = {
+  export type organisasiCountOrderByAggregateInput = {
     id?: SortOrder
-    kode?: SortOrder
-    nama?: SortOrder
-    deskripsi?: SortOrder
+    nama_organisasi?: SortOrder
+    ketua_organisasi?: SortOrder
+    no_kontak?: SortOrder
+    tahun_dibentuk?: SortOrder
+    pembina?: SortOrder
   }
 
-  export type paketAvgOrderByAggregateInput = {
-    id?: SortOrder
-  }
-
-  export type paketMaxOrderByAggregateInput = {
-    id?: SortOrder
-    kode?: SortOrder
-    nama?: SortOrder
-    deskripsi?: SortOrder
-  }
-
-  export type paketMinOrderByAggregateInput = {
-    id?: SortOrder
-    kode?: SortOrder
-    nama?: SortOrder
-    deskripsi?: SortOrder
-  }
-
-  export type paketSumOrderByAggregateInput = {
+  export type organisasiAvgOrderByAggregateInput = {
     id?: SortOrder
   }
 
-  export type customerCountOrderByAggregateInput = {
+  export type organisasiMaxOrderByAggregateInput = {
     id?: SortOrder
-    nama?: SortOrder
-    phone?: SortOrder
-    email?: SortOrder
-    createdat?: SortOrder
+    nama_organisasi?: SortOrder
+    ketua_organisasi?: SortOrder
+    no_kontak?: SortOrder
+    tahun_dibentuk?: SortOrder
+    pembina?: SortOrder
   }
 
-  export type customerAvgOrderByAggregateInput = {
+  export type organisasiMinOrderByAggregateInput = {
     id?: SortOrder
+    nama_organisasi?: SortOrder
+    ketua_organisasi?: SortOrder
+    no_kontak?: SortOrder
+    tahun_dibentuk?: SortOrder
+    pembina?: SortOrder
   }
 
-  export type customerMaxOrderByAggregateInput = {
+  export type organisasiSumOrderByAggregateInput = {
     id?: SortOrder
-    nama?: SortOrder
-    phone?: SortOrder
-    email?: SortOrder
-    createdat?: SortOrder
-  }
-
-  export type customerMinOrderByAggregateInput = {
-    id?: SortOrder
-    nama?: SortOrder
-    phone?: SortOrder
-    email?: SortOrder
-    createdat?: SortOrder
-  }
-
-  export type customerSumOrderByAggregateInput = {
-    id?: SortOrder
-  }
-
-  export type DateTimeFieldUpdateOperationsInput = {
-    set?: Date | string
   }
 
   export type StringFieldUpdateOperationsInput = {
     set?: string
+  }
+
+  export type DateTimeFieldUpdateOperationsInput = {
+    set?: Date | string
   }
 
   export type IntFieldUpdateOperationsInput = {
@@ -4760,10 +3582,6 @@ export namespace Prisma {
     decrement?: number
     multiply?: number
     divide?: number
-  }
-
-  export type BoolFieldUpdateOperationsInput = {
-    set?: boolean
   }
 
   export type NestedIntFilter<$PrismaModel = never> = {
@@ -4775,17 +3593,6 @@ export namespace Prisma {
     gt?: number | IntFieldRefInput<$PrismaModel>
     gte?: number | IntFieldRefInput<$PrismaModel>
     not?: NestedIntFilter<$PrismaModel> | number
-  }
-
-  export type NestedDateTimeFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    in?: Date[] | string[]
-    notIn?: Date[] | string[]
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
   export type NestedStringFilter<$PrismaModel = never> = {
@@ -4802,9 +3609,15 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
-  export type NestedBoolFilter<$PrismaModel = never> = {
-    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
-    not?: NestedBoolFilter<$PrismaModel> | boolean
+  export type NestedDateTimeFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[]
+    notIn?: Date[] | string[]
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
   export type NestedIntWithAggregatesFilter<$PrismaModel = never> = {
@@ -4834,20 +3647,6 @@ export namespace Prisma {
     not?: NestedFloatFilter<$PrismaModel> | number
   }
 
-  export type NestedDateTimeWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    in?: Date[] | string[]
-    notIn?: Date[] | string[]
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeWithAggregatesFilter<$PrismaModel> | Date | string
-    _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedDateTimeFilter<$PrismaModel>
-    _max?: NestedDateTimeFilter<$PrismaModel>
-  }
-
   export type NestedStringWithAggregatesFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[]
@@ -4865,12 +3664,18 @@ export namespace Prisma {
     _max?: NestedStringFilter<$PrismaModel>
   }
 
-  export type NestedBoolWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
-    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
+  export type NestedDateTimeWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[]
+    notIn?: Date[] | string[]
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeWithAggregatesFilter<$PrismaModel> | Date | string
     _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedBoolFilter<$PrismaModel>
-    _max?: NestedBoolFilter<$PrismaModel>
+    _min?: NestedDateTimeFilter<$PrismaModel>
+    _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
 
